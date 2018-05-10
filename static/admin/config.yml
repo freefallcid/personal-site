@@ -13,4 +13,6 @@ collections:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
+      - { name: thumbnail, label: Thumbnail, widget: image }
+      - { name: image, label: Image, widget: image }
       - { name: tags, label: Tags, widget: list }
