@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: bhnywl/gpersonal-site
+  repo: bhnywl/personal-site
 
 media_folder: static/assets
 
