@@ -6,16 +6,31 @@ media_folder: static/assets
 public_folder: /assets
 
 collections:
-  - name: blog
-    label: Blog
-    folder: cms/blog
+  - name: posts
+    label: Posts
+    folder: cms/posts
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { name: path, label: Path }
+      - { name: slug, label: Slug }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: thumbnail, label: Thumbnail, widget: image }
       - { name: image, label: Image, widget: image }
-      - { name: tags, label: Tags, widget: list }
       - { name: body, label: Body, widget: markdown }
+
+  - name: projects
+    label: Projects
+    folder: cms/projects
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { name: githubUrl, label: Github Url, required: false }
+      - { name: liveUrl, label: Live Url, required: false }
+      - { name: title, label: Title }
+      - { name: thumbnail, label: Thumbnail, widget: image }
+      - { name: description, label: Description }
+      - { name: order, label: Order, widget: number }
+      - { name: tech, label: Tech, widget: "select", options: [
+          "React", "Redux", "Ruby on Rails", "JavaScript", "Ruby", "Gatsby", "Webpack"
+        ] }

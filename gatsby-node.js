@@ -1,9 +1,17 @@
 const path = require("path");
 
+function paramaterize(str) {
+  return str
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-zA-Z0-9 -]/, "")
+    .replace(/\s/g, "-");
+}
+
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
 
-  const blogPostTemplate = path.resolve("src/templates/blogTemplate.js");
+  const postTemplate = path.resolve("src/templates/postTemplate.js");
 
   return graphql(
     `
@@ -14,14 +22,9 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       ) {
         edges {
           node {
-            excerpt(pruneLength: 250)
-            html
-            id
+            fileAbsolutePath
             frontmatter {
-              date
               path
-              image
-              title
             }
           }
         }
@@ -33,10 +36,14 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       return Promise.reject(result.errors);
     }
 
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const posts = result.data.allMarkdownRemark.edges.filter(({ node }) =>
+      node.fileAbsolutePath.includes("/cms/posts")
+    );
+
+    posts.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
-        component: blogPostTemplate,
+        component: postTemplate,
         context: {}
       });
     });
