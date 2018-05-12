@@ -6,12 +6,12 @@ export default ({ project }) => {
       <img src={project.thumbnail} />
       <h3>{project.title}</h3>
       <p>{project.description}</p>
-      {project.demoUrl &&
+      {project.githubUrl &&
         <a href={project.githubUrl} target="_blank">
           View on GitHub
         </a>}
-      {project.demoUrl &&
-        <a href={project.demoUrl} target="_blank">
+      {project.liveUrl &&
+        <a href={project.liveUrl} target="_blank">
           View demo
         </a>}
     </div>
@@ -24,7 +24,7 @@ export const query = graphql`
       title
       thumbnail
       githubUrl
-      demoUrl
+      liveUrl
       description
     }
   }
