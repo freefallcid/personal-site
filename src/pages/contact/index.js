@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export default class ContactPage extends Component {
   render() {
     return (
-      <form name="contact" action="/contact-success" data-netlify="true">
+      <form name="contact" action="/contact/success" data-netlify="true">
         <div>
           <label>Name</label>
           <input type="text" name="name" />
