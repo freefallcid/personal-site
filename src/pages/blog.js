@@ -4,9 +4,20 @@ import PostList from "../components/PostList";
 
 export default ({ data }) => {
   return (
-    <div>
-      <div>Blog</div>
-      <PostList posts={data.posts} />
+    <div className="container">
+      <div className="page-header">
+        <h2 className="page-header__heading">
+          Read some of my
+          <strong> blog posts.</strong>
+        </h2>
+        <p className="page-header__paragraph">
+          Things that I've been learning and my thoughts on web development.
+        </p>
+      </div>
+
+      <section className="section">
+        <PostList posts={data.posts} />
+      </section>
     </div>
   );
 };
@@ -16,6 +27,7 @@ export const blogQuery = graphql`
     posts: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/cms/posts/" }}
       sort: { order: DESC, fields: [frontmatter___date] }
+      limit: 50
     ) {
       edges {
         node {

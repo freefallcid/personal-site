@@ -1,0 +1,10 @@
+.post-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.post-list__post {
+  flex-basis: calc(50% - 16px);
+  margin-bottom: 64px;
+}

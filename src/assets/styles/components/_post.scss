@@ -1,0 +1,13 @@
+.post__title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.post__thumbnail {
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 12px;
+  border-radius: $borderRadius;
+}

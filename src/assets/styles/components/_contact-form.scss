@@ -1,0 +1,23 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form__field {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.contact-form__input {
+  flex: 0 1 80%;
+  margin-left: 20px;
+}
+
+.contact-form__label {
+  flex: 0 1 20%;
+  text-align: right;
+}
+
+.contact-form__footer {
+  padding-left: calc(20% + 20px);
+}

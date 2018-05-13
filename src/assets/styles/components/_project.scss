@@ -1,0 +1,40 @@
+.project__title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.project__thumbnail {
+  height: 150px;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 12px;
+  border-radius: $borderRadius;
+}
+
+.project__buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.project__button {
+  padding: 6px 12px;
+  flex: 1 1 50%;
+  border-radius: $borderRadius;
+  background-color: $mediumGrey;
+  text-align: center;
+}
+
+.project__button:first-child {
+  margin-right: 5px;
+}
+
+.project__button:last-child {
+  margin-left: 5px;
+}
+
+.project__button:only-child {
+  margin: 0;
+}
+

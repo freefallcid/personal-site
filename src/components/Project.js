@@ -1,19 +1,17 @@
 import React from "react";
+import Link from "gatsby-link";
 
 export default ({ project }) => {
   return (
-    <div>
-      <img src={project.thumbnail} />
-      <h3>{project.title}</h3>
-      <p>{project.description}</p>
-      {project.githubUrl &&
-        <a href={project.githubUrl} target="_blank">
-          View on GitHub
-        </a>}
-      {project.liveUrl &&
-        <a href={project.liveUrl} target="_blank">
-          View demo
-        </a>}
+    <div className="project">
+      <Link className="project__link" to={project.githubUrl}>
+        <div
+          className="project__thumbnail"
+          style={{ backgroundImage: `url(${project.thumbnail})` }}
+        />
+        <h3 className="project__title">{project.title}</h3>
+        <p className="project__description">{project.description}</p>
+      </Link>
     </div>
   );
 };
@@ -24,7 +22,6 @@ export const query = graphql`
       title
       thumbnail
       githubUrl
-      liveUrl
       description
     }
   }

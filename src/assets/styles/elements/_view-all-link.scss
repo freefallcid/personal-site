@@ -1,0 +1,13 @@
+.view-all-link {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.view-all-link__link {
+  text-decoration: underline;
+  color: $blue;
+  &:hover {
+    color: lighten($blue, 15%);
+  }
+}

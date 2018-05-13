@@ -11,9 +11,9 @@ body {
   height: 100%;
   box-sizing: border-box;
   min-width: 320px;
-  background-color: #fafafa;
-  color: #1a1a1a;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  background-color: $lightestGrey;
+  color: $black;
+  font-family: $sansSerif;
   line-height: 1.5;
 }
 
@@ -25,7 +25,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace;;
+  font-family: $mono;
 }
 
 a {

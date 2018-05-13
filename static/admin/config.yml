@@ -26,7 +26,6 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { name: githubUrl, label: Github Url, required: false }
-      - { name: liveUrl, label: Live Url, required: false }
       - { name: title, label: Title }
       - { name: thumbnail, label: Thumbnail, widget: image }
       - { name: description, label: Description }

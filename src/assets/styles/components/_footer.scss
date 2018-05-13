@@ -1,0 +1,51 @@
+.footer {
+  padding: 46px 0;
+  background-color: $lightGrey;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__left {
+  max-width: 370px;
+}
+
+.footer__brand {
+  font-weight: bold;
+}
+
+.footer__message {
+  font-size: 14px;
+  color: rgba($black, 0.75);
+}
+
+.footer__copyright {
+  font-size: 12px;
+  margin-top: 12px;
+  color: rgba($black, 0.5);
+}
+
+.footer__right {
+  display: flex;
+}
+
+.footer__section {
+  margin-left: 60px;
+  text-align: right;
+}
+
+.footer__section-title {
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.footer__list-item {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.footer__list-item a:hover {
+  text-decoration: underline;
+}

@@ -9,9 +9,11 @@ export default ({ projects: projectData }) => {
   });
 
   return (
-    <ul>
+    <ul className="project-list">
       {projects.map(project => (
-        <Project key={project.githubUrl} project={project} />
+        <li className="project-list__project">
+          <Project key={project.githubUrl} project={project} />
+        </li>
       ))}
     </ul>
   );

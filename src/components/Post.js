@@ -3,11 +3,14 @@ import Link from "gatsby-link";
 
 export default ({ post }) => {
   return (
-    <div key={post.title}>
-      <Link to={post.path}>
-        <img src={post.thumbnail} />
-        <h3>{post.title}</h3>
-        <p>{post.excerpt}</p>
+    <div className="post" key={post.title}>
+      <Link className="post__link" to={post.path}>
+        <div
+          className="post__thumbnail"
+          style={{ backgroundImage: `url(${post.thumbnail})` }}
+        />
+        <h3 className="post__title">{post.title}</h3>
+        <p className="post__excerpt">{post.excerpt}</p>
       </Link>
     </div>
   );

@@ -1,15 +1,32 @@
 import React from "react";
-import Link from "gatsby-link";
 import PostList from "../components/PostList";
 import ProjectList from "../components/ProjectList";
+import ViewAllLink from "../components/ViewAllLink";
 
 export default ({ data }) => {
   return (
     <div>
-      <div>Hello world!</div>
-      <PostList posts={data.posts} />
-      <Link to="/blog">View all posts</Link>
-      <ProjectList projects={data.projects} latest />
+      <div className="container">
+        <div className="page-header">
+          <h2 className="page-header__heading">
+            I am Ben Honeywill, a web developer.
+            <strong> Welcome to my website.</strong>
+          </h2>
+          <p className="page-header__paragraph">
+            Here you'll find my development related blog posts and side projects.
+          </p>
+        </div>
+
+        <section className="section">
+          <ViewAllLink name="posts" to="/blog" />
+          <PostList posts={data.posts} />
+        </section>
+
+        <section className="section">
+          <ViewAllLink name="projects" to="/projects" />
+          <ProjectList projects={data.projects} />
+        </section>
+      </div>
     </div>
   );
 };
@@ -19,7 +36,7 @@ export const indexQuery = graphql`
     posts: allMarkdownRemark(
       filter: {fileAbsolutePath: { regex: "/cms/posts/" }}
       sort: { order: DESC, fields: [frontmatter___date] }
-      limit: 3
+      limit: 2
     ) {
       edges {
         node {
@@ -31,7 +48,7 @@ export const indexQuery = graphql`
     projects: allMarkdownRemark(
       filter: {fileAbsolutePath: { regex: "/cms/projects/" }}
       sort: { order: DESC, fields: [frontmatter___order] }
-      limit: 6
+      limit: 3
     ) {
       edges {
         node {

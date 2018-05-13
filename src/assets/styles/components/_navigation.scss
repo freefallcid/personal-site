@@ -1,0 +1,79 @@
+.navigation {
+  padding: 25px 0;
+  background-color: $lightGrey;
+}
+
+.navigation .container,
+.navigation__start,
+.navigation__primary,
+.navigation__social {
+  display: flex;
+  align-items: center;
+}
+
+.navigation .container {
+  justify-content: space-between;
+}
+
+.navigation__start,
+.navigation__end {
+  width: 150px;
+}
+
+.navigation__primary {
+  justify-content: center;
+}
+
+.navigation__social {
+  justify-content: flex-end;
+}
+
+.navigation__brand {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navigation__primaryItem {
+  padding: 0 12px;
+}
+
+.navigation__link--active {
+  text-shadow: 1px 0 0 currentColor;
+}
+
+.navigation__socialItem {
+  margin-left: 12px;
+}
+
+.navigation__socialIcon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: $lightGrey;
+  padding: 5px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation__socialIcon--twitter {
+  background-color: $twitter;
+  &:hover {
+    background-color: lighten($twitter, 10%);
+  }
+}
+
+.navigation__socialIcon--github {
+  background-color: $github;
+  &:hover {
+    background-color: lighten($github, 20%);
+  }
+}
+
+.navigation__socialIcon--reddit {
+  background-color: $reddit;
+  &:hover {
+    background-color: lighten($reddit, 10%);
+  }
+}

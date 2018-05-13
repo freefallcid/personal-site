@@ -5,9 +5,20 @@ import ProjectList from "../components/ProjectList";
 export default ({ data }) => {
   console.log(data);
   return (
-    <div>
-      <div>Projects</div>
-      <ProjectList projects={data.projects} />
+    <div className="container">
+      <div className="page-header">
+        <h2 className="page-header__heading">
+          Take a look at some of my
+          <strong> projects.</strong>
+        </h2>
+        <p className="page-header__paragraph">
+          Below are some of my open source Github repositories and projects.
+        </p>
+      </div>
+
+      <section className="section">
+        <ProjectList projects={data.projects} />
+      </section>
     </div>
   );
 };

@@ -9,8 +9,12 @@ export default ({ posts: postData, latest }) => {
   });
 
   return (
-    <ul>
-      {posts.map(post => <Post key={post.path} post={post} />)}
+    <ul className="post-list">
+      {posts.map(post => (
+        <li className="post-list__post">
+          <Post key={post.path} post={post} />
+        </li>
+      ))}
     </ul>
   );
 };
