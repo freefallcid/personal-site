@@ -20,7 +20,7 @@ export default ({ post }) => {
 export const query = graphql`
   fragment PostFragment on MarkdownRemark {
     id
-    excerpt(pruneLength: 200)
+    excerpt(pruneLength: 180)
     frontmatter {
       title
       path
