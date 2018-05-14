@@ -29,6 +29,8 @@ collections:
       - { name: image, label: Image, widget: image }
       - { name: description, label: Description }
       - { name: order, label: Order, widget: number }
-      - { name: tech, label: Tech, widget: "select", options: [
-          "React", "Redux", "Ruby on Rails", "JavaScript", "Ruby", "Gatsby", "Webpack"
-        ] }
+      - { name: tech, label: Tech, widget: list, field: {
+          name: techType, label: Tech Type, widget: "select", options: [
+            "React", "Redux", "Ruby on Rails", "JavaScript", "Ruby", "Gatsby", "Webpack"
+          ]
+        } }
