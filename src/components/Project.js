@@ -9,7 +9,7 @@ import rubyIcon from "../assets/icons/tech/ruby.svg";
 import webpackIcon from "../assets/icons/tech/webpack.svg";
 import gatsbyIcon from "../assets/icons/tech/gatsby.jpg";
 import reduxIcon from "../assets/icons/tech/redux.svg";
-import sassIcon from "../assets/icons/tech/sass.svg";
+import sassIcon from "../assets/icons/tech/sass.png";
 
 function getTechIcon(tech) {
   switch (tech) {
