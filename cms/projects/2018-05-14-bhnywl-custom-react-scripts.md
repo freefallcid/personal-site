@@ -10,5 +10,6 @@ tech:
   - React
   - Redux
   - Webpack
+  - Sass
 ---
 
