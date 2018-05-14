@@ -1,16 +1,21 @@
 .project-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .project-list__project {
   flex-basis: calc(100% / 3 - 16px);
   margin-bottom: 48px;
+  margin-right: 24px;
+}
+
+.project-list__project:nth-child(3n) {
+  margin-right: 0;
 }
 
 @media (max-width: 830px) {
   .project-list__project {
     flex-basis: 100%;
+    margin-right: 0;
   }
 }
