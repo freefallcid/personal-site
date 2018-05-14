@@ -9,6 +9,7 @@ import rubyIcon from "../assets/icons/tech/ruby.svg";
 import webpackIcon from "../assets/icons/tech/webpack.svg";
 import gatsbyIcon from "../assets/icons/tech/gatsby.jpg";
 import reduxIcon from "../assets/icons/tech/redux.svg";
+import sassIcon from "../assets/icons/tech/sass.svg";
 
 function getTechIcon(tech) {
   switch (tech) {
@@ -26,6 +27,8 @@ function getTechIcon(tech) {
       return gatsbyIcon;
     case "Redux":
       return reduxIcon;
+    case "Sass":
+      return sassIcon;
     default:
       return undefined;
   }
