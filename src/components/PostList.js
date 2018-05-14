@@ -4,7 +4,6 @@ import Post from "./Post";
 export default ({ posts: postData, latest }) => {
   const posts = postData.edges.map(({ node }) => {
     const post = { ...node, ...node.frontmatter };
-    post.image = post.image[0];
     delete post.frontmatter;
     return post;
   });

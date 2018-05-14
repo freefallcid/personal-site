@@ -65,7 +65,7 @@ export const query = graphql`
       description
       tech
     }
-    image: childrenImageSharp {
+    image: childImageSharp {
       sizes {
         ...GatsbyImageSharpSizes
       }

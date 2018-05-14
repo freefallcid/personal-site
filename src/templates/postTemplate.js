@@ -11,7 +11,7 @@ export default ({ data }) => {
           <h1 className="article__title">{post.frontmatter.title}</h1>
           <p className="article__date">{post.frontmatter.date}</p>
         </header>
-        <Img className="article__image" sizes={post.image[0].sizes} />
+        <Img className="article__image" sizes={post.image.sizes} />
         <main
           className="article__body"
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -30,7 +30,7 @@ export const postQuery = graphql`
         path
         title
       }
-      image: childrenImageSharp {
+      image: childImageSharp {
         sizes {
           ...GatsbyImageSharpSizes
         }

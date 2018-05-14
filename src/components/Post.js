@@ -26,7 +26,7 @@ export const query = graphql`
       path
       date(formatString: "MMMM DD, YYYY")
     }
-    image: childrenImageSharp {
+    image: childImageSharp {
       sizes {
         ...GatsbyImageSharpSizes
       }
