@@ -1,5 +1,5 @@
 ---
-slug: /blog/finding-a-good-folder-structure-for-your-react-and-redux-apps
+path: /blog/finding-a-good-folder-structure-for-your-react-and-redux-apps
 date: 2018-05-14T17:22:13.855Z
 title: Finding a good folder structure for your React & Redux apps
 image: /assets/binocular-cap-clouds-802412.jpg

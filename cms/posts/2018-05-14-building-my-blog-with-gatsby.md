@@ -1,5 +1,5 @@
 ---
-slug: /blog/building-my-blog-with-gatsby
+path: /blog/building-my-blog-with-gatsby
 date: 2018-05-14T18:14:48+01:00
 title: Building my blog with Gatsby
 image: /assets/apple-device-blur-blurry-273222.jpg
