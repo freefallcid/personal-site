@@ -1,5 +1,5 @@
 ---
-path: /blog/finding-a-good-folder-structure-for-your-react-and-redux-apps
+path: /blog/organising-large-react-apps
 date: 2018-05-14T17:22:13.855Z
 title: Organising large React apps
 image: /assets/amazing-balance-blur-312839.jpg
