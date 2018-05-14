@@ -1,5 +1,7 @@
 .page-header {
-  padding: 70px 0;
+  padding: 70px 30px;
+  max-width: 650px;
+  margin: auto;
   text-align: center;
 }
 
@@ -11,4 +13,25 @@
   font-size: 16px;
   color: $darkestGrey;
   margin-top: 12px;
+}
+
+.page-header__paragraph a {
+  color: rgba($blue, 0.7);
+  text-decoration: underline;
+  &:hover {
+    color: lighten(rgba($blue, 0.7), 20%);
+  }
+}
+
+@media (max-width: 560px) {
+  .page-header__heading strong {
+    display: block;
+    margin-top: -5px;
+  }
+}
+
+@media (max-width: 525px) {
+  .page-header {
+    padding: 70px 0;
+  }
 }

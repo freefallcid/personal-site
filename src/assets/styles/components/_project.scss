@@ -1,10 +1,14 @@
+.project__link:hover .project__title {
+  text-decoration: underline;
+}
+
 .project__title {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: $font-weight-bold;
   margin-bottom: 6px;
 }
 
-.project__thumbnail {
+.project__image {
   height: 150px;
   background-position: center;
   background-size: cover;
@@ -12,29 +16,89 @@
   border-radius: $borderRadius;
 }
 
-.project__buttons {
+.project__tech {
   display: flex;
-  justify-content: space-between;
-  margin-top: 16px;
+  align-items: center;
+  padding-top: 16px;
 }
 
-.project__button {
-  padding: 6px 12px;
-  flex: 1 1 50%;
+.project__techList {
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+}
+
+.project__techText {
+  color: $darkestGrey;
+  font-size: 14px;
+}
+
+.project__techItem {
+  position: relative;
+  margin-right: 12px;
+}
+
+.project__techTooltip {
+  position: absolute;
+  background-color: $blue;
+  color: $white;
+  transform: translate(calc(-50% + 13px), 8px);
+  font-size: 14px;
+  padding: 4px 16px;
   border-radius: $borderRadius;
-  background-color: $mediumGrey;
-  text-align: center;
+  display: none;
+  white-space: nowrap;
+  animation: project-tooltip 0.15s ease-out;
+  &:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: calc(50% - 4px);
+    width: 10px;
+    height: 10px;
+    background-color: $blue;
+    transform: rotate(45deg);
+  }
 }
 
-.project__button:first-child {
-  margin-right: 5px;
+@keyframes project-tooltip {
+  0% {
+    transform: translate(calc(-50% + 13px), 13px);
+  }
+  100% {
+    transform: translate(calc(-50% + 13px), 8px);
+  }
 }
 
-.project__button:last-child {
-  margin-left: 5px;
+.project__techItem:hover .project__techTooltip {
+  display: block;
 }
 
-.project__button:only-child {
-  margin: 0;
+.project__techIcon {
+  max-height: 26px;
+  width: 26px;
 }
 
+@media (max-width: 830px) {
+  .project__link {
+    display: flex;
+  }
+
+  .project__image {
+    width: 180px;
+    height: auto;
+    margin-right: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  .project__link {
+    display: block;
+  }
+
+  .project__image {
+    width: auto;
+    height: 170px;
+    margin-right: 0;
+  }
+}

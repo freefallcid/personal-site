@@ -15,7 +15,6 @@ collections:
       - { name: slug, label: Slug }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
-      - { name: thumbnail, label: Thumbnail, widget: image }
       - { name: image, label: Image, widget: image }
       - { name: body, label: Body, widget: markdown }
 
@@ -27,7 +26,7 @@ collections:
     fields:
       - { name: githubUrl, label: Github Url, required: false }
       - { name: title, label: Title }
-      - { name: thumbnail, label: Thumbnail, widget: image }
+      - { name: image, label: Image, widget: image }
       - { name: description, label: Description }
       - { name: order, label: Order, widget: number }
       - { name: tech, label: Tech, widget: "select", options: [

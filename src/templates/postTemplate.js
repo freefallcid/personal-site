@@ -1,4 +1,5 @@
 import React from "react";
+import Img from "gatsby-image";
 
 export default ({ data }) => {
   const post = data.markdownRemark;
@@ -10,10 +11,7 @@ export default ({ data }) => {
           <h1 className="article__title">{post.frontmatter.title}</h1>
           <p className="article__date">{post.frontmatter.date}</p>
         </header>
-        <div
-          className="article__image"
-          style={{ backgroundImage: `url(${post.frontmatter.image})` }}
-        />
+        <Img className="article__image" sizes={post.image[0].sizes} />
         <main
           className="article__body"
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -31,7 +29,11 @@ export const postQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
-        image
+      }
+      image: childrenImageSharp {
+        sizes {
+          ...GatsbyImageSharpSizes
+        }
       }
     }
   }

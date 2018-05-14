@@ -1,4 +1,5 @@
 const path = require("path");
+const { createFilePath } = require("gatsby-source-filesystem");
 
 function paramaterize(str) {
   return str
@@ -15,22 +16,22 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
   return graphql(
     `
-    {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
-      ) {
-        edges {
-          node {
-            fileAbsolutePath
-            frontmatter {
-              path
+      {
+        allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] }
+          limit: 1000
+        ) {
+          edges {
+            node {
+              fileAbsolutePath
+              frontmatter {
+                path
+              }
             }
           }
         }
       }
-    }
-  `
+    `
   ).then(result => {
     if (result.errors) {
       return Promise.reject(result.errors);
@@ -48,4 +49,35 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       });
     });
   });
+};
+
+exports.onCreateNode = ({ node, getNode, getNodes, boundActionCreators }) => {
+  const { createNodeField, createParentChildLink } = boundActionCreators;
+
+  if (node.internal.type === "MarkdownRemark") {
+    const slug = createFilePath({ node, getNode, basePath: "pages" });
+    createNodeField({
+      node,
+      name: "slug",
+      value: slug
+    });
+
+    if (typeof node.frontmatter.image === "string") {
+      const pathToFile = path
+        .join(__dirname, "static", node.frontmatter.image)
+        .split(path.sep)
+        .join("/");
+
+      const fileNode = getNodes().find(n => n.absolutePath === pathToFile);
+
+      if (fileNode != null) {
+        const imageSharpNodeId = fileNode.children.find(n =>
+          n.endsWith(">> ImageSharp")
+        );
+        const imageSharpNode = getNodes().find(n => n.id === imageSharpNodeId);
+
+        createParentChildLink({ parent: node, child: imageSharpNode });
+      }
+    }
+  }
 };

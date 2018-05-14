@@ -1,13 +1,21 @@
-.post__title {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 6px;
+.post__link:hover .post__title {
+  text-decoration: underline;
 }
 
-.post__thumbnail {
-  height: 200px;
-  background-position: center;
-  background-size: cover;
-  margin-bottom: 12px;
+.post__title {
+  font-size: 20px;
+  font-weight: $font-weight-bold;
+  margin-bottom: 3px;
+}
+
+.post__date {
+  margin-bottom: 6px;
+  color: $darkestGrey;
+  font-size: 14px;
+}
+
+.post__image {
+  height: 170px;
   border-radius: $borderRadius;
+  margin-bottom: 12px;
 }

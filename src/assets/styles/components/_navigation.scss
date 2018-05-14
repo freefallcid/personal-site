@@ -1,6 +1,8 @@
 .navigation {
   padding: 25px 0;
-  background-color: $lightGrey;
+  border-top: 5px solid $blue;
+  background-color: lighten($blue, 55%);
+  border-bottom: 1px solid lighten($blue, 50%);
 }
 
 .navigation .container,
@@ -22,6 +24,7 @@
 
 .navigation__primary {
   justify-content: center;
+  display: flex;
 }
 
 .navigation__social {
@@ -30,15 +33,39 @@
 
 .navigation__brand {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: $font-weight-bold;
 }
 
 .navigation__primaryItem {
   padding: 0 12px;
 }
 
+.navigation__link {
+  position: relative;
+}
+
+.navigation__link:after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 70%;
+  left: 15%;
+  bottom: -3px;
+  background-color: $black;
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+.navigation__link:hover:after {
+  opacity: 1;
+}
+
 .navigation__link--active {
-  text-shadow: 1px 0 0 currentColor;
+  color: $blue;
+}
+
+.navigation__link--active:after {
+  background-color: $blue;
 }
 
 .navigation__socialItem {
@@ -55,6 +82,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 0.15s ease-out;
 }
 
 .navigation__socialIcon--twitter {
@@ -75,5 +103,77 @@
   background-color: $reddit;
   &:hover {
     background-color: lighten($reddit, 10%);
+  }
+}
+
+.navigation__toggle {
+  display: none;
+}
+
+@media (max-width: 750px) {
+  .navigation__start {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .navigation__middle {
+    position: relative;
+  }
+
+  .navigation__primary {
+    display: none;
+  }
+
+  .navigation__primary--active {
+    position: absolute;
+    background-color: $white;
+    border-radius: $borderRadius;
+    display: block;
+    left: -10px;
+    top: calc(100% + 16px);
+    box-shadow: 1px 1px 4px rgba($black, 0.3);
+    z-index: 2;
+  }
+
+  .navigation__primary--active:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 20px;
+    width: 10px;
+    height: 10px;
+    background-color: $white;
+    transform: rotate(45deg);
+  }
+
+  .navigation__primaryItem {
+    padding: 0;
+    border-bottom: 1px solid $mediumGrey;
+  }
+
+  .navigation__primaryItem:last-child {
+    border-bottom: none;
+  }
+
+  .navigation__link {
+    display: block;
+    padding: 12px 20px;
+    width: 200px;
+  }
+
+  .navigation__link:hover {
+    background-color: $lightGrey;
+  }
+
+  .navigation__link:hover:after {
+    display: none;
+  }
+
+  .navigation__toggle {
+    display: block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
   }
 }

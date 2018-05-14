@@ -3,13 +3,12 @@ import Link from "gatsby-link";
 import ProjectList from "../components/ProjectList";
 
 export default ({ data }) => {
-  console.log(data);
   return (
     <div className="container">
       <div className="page-header">
         <h2 className="page-header__heading">
-          Take a look at some of my
-          <strong> projects.</strong>
+          Take a look at some of
+          <strong> my projects.</strong>
         </h2>
         <p className="page-header__paragraph">
           Below are some of my open source Github repositories and projects.
@@ -26,7 +25,7 @@ export default ({ data }) => {
 export const projectsQuery = graphql`
   query ProjectsQuery {
     projects: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/cms/projects/" }}
+      filter: { fileAbsolutePath: { regex: "/cms/projects/" } }
       sort: { order: DESC, fields: [frontmatter___order] }
     ) {
       edges {

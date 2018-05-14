@@ -5,6 +5,12 @@
 }
 
 .project-list__project {
-  flex-basis: calc(100%/3 - 16px);
+  flex-basis: calc(100% / 3 - 16px);
   margin-bottom: 48px;
+}
+
+@media (max-width: 830px) {
+  .project-list__project {
+    flex-basis: 100%;
+  }
 }

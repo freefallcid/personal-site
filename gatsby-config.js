@@ -6,6 +6,17 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-preact`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "assets",
+        path: `${__dirname}/static/assets`
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -25,6 +36,19 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-relative-images`,
+            options: {
+              name: "assets"
+            }
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 700,
+              backgroundColor: `transparent`
+            }
+          },
+          {
             resolve: `gatsby-remark-prismjs`,
             options: {
               classPrefix: "language-"
@@ -33,6 +57,12 @@ module.exports = {
         ]
       }
     },
-    `gatsby-plugin-sass`
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`rubik\:400,700`]
+      }
+    },
+    `gatsby-plugin-netlify`
   ]
 };

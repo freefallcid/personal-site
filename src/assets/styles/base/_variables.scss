@@ -15,9 +15,11 @@ $github: #1a1a1a;
 $reddit: #ff5700;
 
 /* Fonts */
-$sansSerif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", sans-serif;
+$sansSerif: "Rubik", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+  Roboto, "Helvetica Neue", sans-serif;
 $mono: "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
 
 /* Other */
 $borderRadius: 3px;

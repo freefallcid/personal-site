@@ -1,6 +1,7 @@
 .footer {
-  padding: 46px 0;
-  background-color: $lightGrey;
+  padding: 46px 0 70px 0;
+  background-color: lighten($blue, 55%);
+  border-top: 1px solid lighten($blue, 50%);
 }
 
 .footer .container {
@@ -13,18 +14,19 @@
 }
 
 .footer__brand {
-  font-weight: bold;
+  font-weight: $font-weight-bold;
+  color: rgba($black, 0.75);
 }
 
 .footer__message {
   font-size: 14px;
-  color: rgba($black, 0.75);
+  color: rgba($black, 0.6);
 }
 
 .footer__copyright {
   font-size: 12px;
   margin-top: 12px;
-  color: rgba($black, 0.5);
+  color: rgba($black, 0.3);
 }
 
 .footer__right {
@@ -37,15 +39,40 @@
 }
 
 .footer__section-title {
-  font-weight: bold;
+  font-weight: $font-weight-bold;
   margin-bottom: 12px;
+  color: rgba($black, 0.75);
 }
 
 .footer__list-item {
   font-size: 14px;
   margin-bottom: 6px;
+  color: rgba($black, 0.6);
 }
 
 .footer__list-item a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 770px) {
+  .footer .container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .footer__right {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__section {
+    margin-left: 0;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  .footer__left {
+    text-align: center;
+    margin-top: 30px;
+  }
 }

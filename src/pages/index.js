@@ -9,11 +9,16 @@ export default ({ data }) => {
       <div className="container">
         <div className="page-header">
           <h2 className="page-header__heading">
-            I am Ben Honeywill, a web developer.
+            I am Ben Honeywill.
             <strong> Welcome to my website.</strong>
           </h2>
           <p className="page-header__paragraph">
-            Here you'll find my development related blog posts and side projects.
+            I'm a front-end web developer at{" "}
+            <a href="https://atech.media" target="_blank">
+              aTech Media
+            </a>{" "}
+            in Poole. My website is where I post all about what's been exciting
+            me in web dev.
           </p>
         </div>
 
@@ -34,7 +39,7 @@ export default ({ data }) => {
 export const indexQuery = graphql`
   query IndexQuery {
     posts: allMarkdownRemark(
-      filter: {fileAbsolutePath: { regex: "/cms/posts/" }}
+      filter: { fileAbsolutePath: { regex: "/cms/posts/" } }
       sort: { order: DESC, fields: [frontmatter___date] }
       limit: 2
     ) {
@@ -44,9 +49,9 @@ export const indexQuery = graphql`
         }
       }
     }
-    
+
     projects: allMarkdownRemark(
-      filter: {fileAbsolutePath: { regex: "/cms/projects/" }}
+      filter: { fileAbsolutePath: { regex: "/cms/projects/" } }
       sort: { order: DESC, fields: [frontmatter___order] }
       limit: 3
     ) {
