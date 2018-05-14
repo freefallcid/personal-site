@@ -26,7 +26,7 @@ export const projectsQuery = graphql`
   query ProjectsQuery {
     projects: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/cms/projects/" } }
-      sort: { order: DESC, fields: [frontmatter___order] }
+      sort: { order: ASC, fields: [frontmatter___order] }
     ) {
       edges {
         node {

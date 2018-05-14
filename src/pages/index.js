@@ -52,7 +52,7 @@ export const indexQuery = graphql`
 
     projects: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/cms/projects/" } }
-      sort: { order: DESC, fields: [frontmatter___order] }
+      sort: { order: ASC, fields: [frontmatter___order] }
       limit: 3
     ) {
       edges {
