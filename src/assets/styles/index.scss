@@ -2,11 +2,14 @@
 @import "base/normalize";
 @import "base/base";
 
+@import "~prismjs/themes/prism-solarizedlight";
+
 @import "elements/container";
 @import "elements/page-header";
 @import "elements/section";
 @import "elements/view-all-link";
 
+@import "components/article";
 @import "components/contact-form";
 @import "components/footer";
 @import "components/navigation";

@@ -22,7 +22,7 @@ export default () => {
               </Link>
             </li>
             <li className="navigation__primaryItem">
-              <Link exact activeClassName="navigation__link--active" to="/blog">
+              <Link activeClassName="navigation__link--active" to="/blog">
                 Blog
               </Link>
             </li>

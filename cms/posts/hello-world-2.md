@@ -6,10 +6,15 @@ thumbnail: /assets/placeholder.png
 image: /assets/placeholder.png
 ---
 
-# Sint limina
+# Sint liminaun
 
 ## His saltu sensurus Amyntor sinu adgrediar induroque
 
+```js
+const x = () => {
+  console.log("yo")
+}
+```
 Lorem markdownum levavit quas caelo orbem suis vacuo te dicunt concitat. Tutum
 humo mittor vidit: ecce loqui admota super fuit.
 

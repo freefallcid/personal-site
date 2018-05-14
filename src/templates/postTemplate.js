@@ -4,13 +4,21 @@ export default ({ data }) => {
   const post = data.markdownRemark;
 
   return (
-    <div>
-      <div>
-        <h1>{post.frontmatter.title}</h1>
-        <h2>{post.frontmatter.date}</h2>
-        <img src={post.frontmatter.image} />
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </div>
+    <div className="container">
+      <article className="article">
+        <header className="article__header">
+          <h1 className="article__title">{post.frontmatter.title}</h1>
+          <p className="article__date">{post.frontmatter.date}</p>
+        </header>
+        <div
+          className="article__image"
+          style={{ backgroundImage: `url(${post.frontmatter.image})` }}
+        />
+        <main
+          className="article__body"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
+      </article>
     </div>
   );
 };
