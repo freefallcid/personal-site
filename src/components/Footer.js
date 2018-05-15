@@ -8,12 +8,10 @@ export default () => {
         <div className="footer__left">
           <h3 className="footer__brand">bhnywl.com</h3>
           <p className="footer__message">
-            Thank you for visiting my website. I am Ben Honeywill,
-            a web developer from sunny Bournemouth in the UK.
+            Thank you for visiting my website. I am Ben Honeywill, a web
+            developer from sunny Bournemouth in the UK.
           </p>
-          <p className="footer__copyright">
-            Copyright Ben Honeywill 2018
-          </p>
+          <p className="footer__copyright">Copyright Ben Honeywill 2018</p>
         </div>
         <div className="footer__right">
           <div className="footer__section">
@@ -23,10 +21,10 @@ export default () => {
                 <Link to="/">Home</Link>
               </li>
               <li className="footer__list-item">
-                <Link to="/">Blog</Link>
+                <Link to="/blog">Blog</Link>
               </li>
               <li className="footer__list-item">
-                <Link to="/">Projects</Link>
+                <Link to="/projects">Projects</Link>
               </li>
             </ul>
           </div>
