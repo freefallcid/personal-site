@@ -2,7 +2,7 @@
 path: /blog/organising-large-react-apps
 date: 2018-05-14T17:22:13.855Z
 title: Organising large React apps
-image: /assets/balance-blurred-background-boulders-715414.jpg
+image: /assets/balance-macro-ocean-235990.jpg
 pinned: true
 ---
 
