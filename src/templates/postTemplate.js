@@ -1,6 +1,7 @@
 import React from "react";
 import Img from "gatsby-image";
 import Helmet from "react-helmet";
+import config from "../../config";
 
 export default ({ data }) => {
   const post = data.markdownRemark;
@@ -33,14 +34,14 @@ function BlogPostHead({ post }) {
       {/* OpenGraph tags */}
       <meta
         property="og:url"
-        content={`https://www.bhnywl.com${post.frontmatter.path}`}
+        content={config.siteUrl + post.frontmatter.path}
       />
       <meta property="og:type" content="article" />
       <meta property="og:title" content={post.frontmatter.title} />
       <meta property="og:description" content={post.excerpt} />
       <meta
         property="og:image"
-        content={`https://www.bhnywl.com${post.image.sizes.src}`}
+        content={config.siteUrl + post.image.sizes.src}
       />
 
       {/* Twitter Card tags */}
@@ -50,7 +51,7 @@ function BlogPostHead({ post }) {
       <meta name="twitter:description" content={post.excerpt} />
       <meta
         name="twitter:image"
-        content={`https://www.bhnywl.com${post.image.sizes.src}`}
+        content={config.siteUrl + post.image.sizes.src}
       />
     </Helmet>
   );
