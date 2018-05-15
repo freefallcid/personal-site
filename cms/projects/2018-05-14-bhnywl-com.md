@@ -11,5 +11,6 @@ tech:
   - Gatsby
   - React
   - Sass
+  - GraphQL
 ---
 
