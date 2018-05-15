@@ -145,6 +145,8 @@
     height: 10px;
     background-color: $white;
     transform: rotate(45deg);
+    box-shadow: -4px 0 4px -3px rgba($black, 0.15),
+      0 -4px 4px -3px rgba($black, 0.15);
   }
 
   .navigation__primaryItem {

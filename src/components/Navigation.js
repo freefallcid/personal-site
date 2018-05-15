@@ -29,6 +29,11 @@ export default class Navigation extends React.Component {
     this.setState({ open: !this.state.open });
   }
 
+  closeNav(e) {
+    e.stopPropagation();
+    this.setState({ open: false });
+  }
+
   render() {
     return (
       <nav className="navigation">
@@ -59,6 +64,7 @@ export default class Navigation extends React.Component {
                   exact
                   activeClassName="navigation__link--active"
                   to="/"
+                  onClick={this.closeNav.bind(this)}
                 >
                   Home
                 </Link>
@@ -68,6 +74,7 @@ export default class Navigation extends React.Component {
                   className="navigation__link"
                   activeClassName="navigation__link--active"
                   to="/blog"
+                  onClick={this.closeNav.bind(this)}
                 >
                   Blog
                 </Link>
@@ -78,6 +85,7 @@ export default class Navigation extends React.Component {
                   className="navigation__link"
                   activeClassName="navigation__link--active"
                   to="/projects"
+                  onClick={this.closeNav.bind(this)}
                 >
                   Projects
                 </Link>

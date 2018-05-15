@@ -89,6 +89,10 @@
     height: auto;
     margin-right: 18px;
   }
+
+  .project__techItem:hover .project__techTooltip {
+    display: none;
+  }
 }
 
 @media (max-width: 500px) {
