@@ -39,7 +39,10 @@ export default ({ data }) => {
 export const indexQuery = graphql`
   query IndexQuery {
     posts: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/cms/posts/" } }
+      filter: {
+        fileAbsolutePath: { regex: "/cms/posts/" }
+        frontmatter: { pinned: { eq: true } }
+      }
       sort: { order: DESC, fields: [frontmatter___date] }
       limit: 2
     ) {

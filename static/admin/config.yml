@@ -17,6 +17,7 @@ collections:
       - { name: title, label: Title }
       - { name: image, label: Image, widget: image }
       - { name: body, label: Body, widget: markdown }
+      - { name: pinned, label: Pinned, widget: boolean, default: false }
 
   - name: projects
     label: Projects
