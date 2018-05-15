@@ -26,11 +26,13 @@ export default ({ children, location }) => {
           content="I am Ben Honeywill, a front-end web developer from Bournemouth, UK. This is my website."
         />
       </Helmet>
-      <header>
-        <Navigation />
-      </header>
-      <main>{children()}</main>
-      <Footer />
+      <div className="layout">
+        <header>
+          <Navigation />
+        </header>
+        <main>{children()}</main>
+        <Footer />
+      </div>
     </div>
   );
 };
