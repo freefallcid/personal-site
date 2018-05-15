@@ -1,15 +1,11 @@
 module.exports = {
-  siteMetadata: {
-    title: `Ben Honeywill`,
-    siteUrl: `https://www.bhnywl.com`,
-    description: `Ben Honeywill is a front-end web developer from Bournemouth, UK.`
-  },
   plugins: [
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-preact`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-source-filesystem",
       options: {

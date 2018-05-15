@@ -1,10 +1,14 @@
 import React from "react";
 import Link from "gatsby-link";
+import Helmet from "react-helmet";
 import ProjectList from "../components/ProjectList";
 
 export default ({ data }) => {
   return (
     <div className="container">
+      <Helmet>
+        <title>Projects - bhnywl</title>
+      </Helmet>
       <div className="page-header">
         <h2 className="page-header__heading">
           Take a look at some of

@@ -1,11 +1,13 @@
 import React from "react";
 import Img from "gatsby-image";
+import Helmet from "react-helmet";
 
 export default ({ data }) => {
   const post = data.markdownRemark;
 
   return (
     <div className="container">
+      <BlogPostHead post={post} />
       <article className="article">
         <header className="article__header">
           <h1 className="article__title">{post.frontmatter.title}</h1>
@@ -21,10 +23,44 @@ export default ({ data }) => {
   );
 };
 
+function BlogPostHead({ post }) {
+  return (
+    <Helmet>
+      {/* General tags */}
+      <meta name="description" content={post.excerpt} />
+      <meta name="image" content={post.image.sizes.src} />
+
+      {/* OpenGraph tags */}
+      <meta
+        property="og:url"
+        content={`https://www.bhnywl.com${post.frontmatter.path}`}
+      />
+      <meta property="og:type" content="article" />
+      <meta property="og:title" content={post.frontmatter.title} />
+      <meta property="og:description" content={post.excerpt} />
+      <meta
+        property="og:image"
+        content={`https://www.bhnywl.com${post.image.sizes.src}`}
+      />
+
+      {/* Twitter Card tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:creator" content="@bhnywl" />
+      <meta name="twitter:title" content={post.frontmatter.title} />
+      <meta name="twitter:description" content={post.excerpt} />
+      <meta
+        name="twitter:image"
+        content={`https://www.bhnywl.com${post.image.sizes.src}`}
+      />
+    </Helmet>
+  );
+}
+
 export const postQuery = graphql`
   query PostByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
+      excerpt(pruneLength: 180)
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         path
