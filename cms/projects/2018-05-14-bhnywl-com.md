@@ -7,7 +7,6 @@ description: >-
   generator Gatsby.
 order: '4'
 tech:
-  - JavaScript
   - Gatsby
   - React
   - Sass
