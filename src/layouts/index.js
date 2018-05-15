@@ -29,7 +29,10 @@ function LayoutHead({ location }) {
         name="description"
         content="I am Ben Honeywill, a front-end web developer from Bournemouth, UK. This is my website."
       />
-      <meta property="og:url" content={config.siteUrl + location.pathname} />
+      <meta
+        property="og:url"
+        content={config.siteUrl + (location && location.pathname)}
+      />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="bhnywl" />
       <meta property="og:image" content={config.siteUrl + "/brand.png"} />
