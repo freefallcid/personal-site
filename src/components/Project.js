@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
 import Img from "gatsby-image";
-
+import TechIcon from "./TechIcon";
 import javascriptIcon from "../assets/icons/tech/javascript.svg";
 import reactIcon from "../assets/icons/tech/react.svg";
 import rubyOnRailsIcon from "../assets/icons/tech/ruby-on-rails.svg";
@@ -10,6 +10,7 @@ import webpackIcon from "../assets/icons/tech/webpack.svg";
 import gatsbyIcon from "../assets/icons/tech/gatsby.jpg";
 import reduxIcon from "../assets/icons/tech/redux.svg";
 import sassIcon from "../assets/icons/tech/sass.png";
+import graphqlIcon from "../assets/icons/tech/graphql.png";
 
 function getTechIcon(tech) {
   switch (tech) {
@@ -29,6 +30,8 @@ function getTechIcon(tech) {
       return reduxIcon;
     case "Sass":
       return sassIcon;
+    case "GraphQL":
+      return graphqlIcon;
     default:
       return undefined;
   }
@@ -47,7 +50,7 @@ export default ({ project }) => {
             <ul className="project__techList">
               {project.tech.map(tech => (
                 <li key={tech} className="project__techItem">
-                  <img className="project__techIcon" src={getTechIcon(tech)} />
+                  <TechIcon tech={tech} />
                   <div className="project__techTooltip">{tech}</div>
                 </li>
               ))}
