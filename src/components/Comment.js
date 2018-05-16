@@ -7,7 +7,7 @@ export default ({ comment }) => {
       <div>
         <h3 className="comment__name">{comment.name}</h3>
         <p className="comment__date">{comment.date}</p>
-        <p className="comment__message">{comment.message}</p>
+        <p className="comment__body">{comment.body}</p>
       </div>
     </div>
   );
@@ -18,7 +18,7 @@ export const query = graphql`
     id
     frontmatter {
       name
-      message
+      body
       email
       date(formatString: "MMMM DD, YYYY")
     }
