@@ -4,8 +4,10 @@ import config from "../../config";
 
 export default class CommentForm extends React.Component {
   state = {
+    open: false,
     success: false,
     error: false,
+    loading: false,
     fields: {
       email: "",
       name: "",
@@ -21,8 +23,11 @@ export default class CommentForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    this.setState({ loading: true });
     axios
-      .post(config.staticmanUrl, { fields: this.state.fields })
+      .post(`${config.staticmanUrl}/comments`, {
+        fields: { ...this.state.fields, path: this.props.path }
+      })
       .then(this.success.bind(this))
       .catch(this.error.bind(this));
   }
@@ -31,6 +36,7 @@ export default class CommentForm extends React.Component {
     this.setState({
       success: true,
       error: false,
+      loading: false,
       fields: {
         email: "",
         name: "",
@@ -42,54 +48,84 @@ export default class CommentForm extends React.Component {
   error(err) {
     console.log(JSON.parse(err.request.response));
     this.setState({
+      loading: false,
       success: false,
       error: true
     });
   }
 
+  open() {
+    this.setState({ open: true });
+  }
+
   render() {
+    if (!this.state.open) {
+      return (
+        <div
+          onClick={this.open.bind(this)}
+          className="comment-form comment-form--hidden"
+        >
+          <p>Post a comment</p>
+        </div>
+      );
+    }
+
     return (
-      <form onSubmit={this.handleSubmit.bind(this)}>
-        {this.state.error &&
-          <div className="notice notice--error">
-            <p>Sorry, there was an error submitting your comment</p>
-          </div>}
-        {this.state.success &&
-          <div className="notice notice--success">
-            <p>Thank you! Your comment is being processed</p>
-          </div>}
+      <form className="comment-form" onSubmit={this.handleSubmit.bind(this)}>
+        <label htmlFor="message">Leave a comment</label>
         <div className="comment-form__field">
-          <label htmlFor="name">Name</label>
-          <input
-            className="input"
-            onChange={this.handleChange.bind(this)}
-            type="text"
-            value={this.state.fields.name}
-            id="name"
-          />
-        </div>
-        <div className="comment-form__field">
-          <label htmlFor="email">E-mail address</label>
-          <input
-            className="input"
-            onChange={this.handleChange.bind(this)}
-            type="email"
-            value={this.state.fields.email}
-            id="email"
-          />
-        </div>
-        <div className="comment-form__field">
-          <label htmlFor="message">Your comment</label>
+          {this.state.error &&
+            <div className="notice notice--error">
+              <p>Sorry, there was an error submitting your comment</p>
+            </div>}
+          {this.state.success &&
+            <div className="notice notice--success">
+              <p>Thank you! Your comment is being processed</p>
+            </div>}
           <textarea
             className="input"
             onChange={this.handleChange.bind(this)}
             value={this.state.fields.message}
             id="message"
+            placeholder="Enter you comment (markdown is supported)"
+            autoFocus
+            required
           />
         </div>
-        <button className="comment-form__submit" type="submit">
-          Post comment
-        </button>
+        <div className="comment-form__flex">
+          <div className="comment-form__field">
+            <input
+              className="input"
+              onChange={this.handleChange.bind(this)}
+              type="text"
+              value={this.state.fields.name}
+              id="name"
+              placeholder="Enter you name"
+              required
+            />
+          </div>
+          <div className="comment-form__field">
+            <input
+              className="input"
+              onChange={this.handleChange.bind(this)}
+              type="email"
+              value={this.state.fields.email}
+              id="email"
+              placeholder="Enter you email address"
+              required
+            />
+          </div>
+
+          <button
+            className={
+              "comment-form__submit button " +
+                (this.state.loading ? "button--loading" : null)
+            }
+            type="submit"
+          >
+            Post comment
+          </button>
+        </div>
       </form>
     );
   }

@@ -1,0 +1,40 @@
+.comment-form {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  border-radius: $borderRadius;
+  border: 1px solid $mediumGrey;
+  margin-bottom: 15px;
+}
+
+.comment-form--hidden {
+  cursor: pointer;
+  transition: all 0.1s ease-out;
+  text-align: center;
+  font-size: 18px;
+  
+  &:hover {
+    background-color: $lightGrey;
+  }
+}
+
+.comment-form__field {
+  margin-bottom: 10px;
+}
+
+.comment-form__flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .comment-form__field {
+    margin-bottom: 0;
+    flex: 1;
+    margin-right: 10px;
+  }
+}
+
+.comment-form label {
+  display: inline-block;
+  padding-bottom: 12px;
+  font-weight: $font-weight-bold;
+}

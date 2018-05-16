@@ -3,14 +3,14 @@ comments:
   branch: "development"
   commitMessage: "Adding a new comment"
   extension: "md"
-  filename: "{@timestamp}_{@id}"
+  filename: "{@id}"
   format: "frontmatter"
   generatedFields:
     date:
       type: date
       options:
         format: "iso8601"
-  moderation: false
+  moderation: true
   name: "www.bhnywl.com"
   notifications:
     enabled: false

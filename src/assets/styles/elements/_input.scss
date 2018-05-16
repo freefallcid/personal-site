@@ -1,0 +1,14 @@
+.input {
+  background-color: $lightestGrey;
+  border: 1px solid $mediumGrey;
+  border-radius: $borderRadius;
+  display: block;
+  outline: none;
+  padding: 8px 14px;
+  width: 100%;
+  &:focus {
+    background-color: $white;
+    border-color: $blue;
+    box-shadow: 0 0 0 2px rgba($blue, 0.3);
+  }
+}

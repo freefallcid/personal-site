@@ -23,7 +23,7 @@ export default ({ data }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </article>
-      <CommentForm path={post.path} />
+      <CommentForm path={post.frontmatter.path} />
       <CommentList comments={comments} />
     </div>
   );

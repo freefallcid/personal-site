@@ -19,6 +19,7 @@ export default ({ comment }) => {
 export const query = graphql`
   fragment CommentFragment on MarkdownRemark {
     html
+    id
     frontmatter {
       name
       email

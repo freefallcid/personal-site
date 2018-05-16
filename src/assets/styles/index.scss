@@ -3,14 +3,18 @@
 @import "base/base";
 @import "base/syntax";
 
+@import "elements/button";
 @import "elements/container";
+@import "elements/input";
 @import "elements/layout";
+@import "elements/notice";
 @import "elements/page-header";
 @import "elements/section";
 @import "elements/view-all-link";
 
 @import "components/article";
 @import "components/comment";
+@import "components/comment-form";
 @import "components/comment-list";
 @import "components/footer";
 @import "components/navigation";

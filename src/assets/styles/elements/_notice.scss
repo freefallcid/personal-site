@@ -1,0 +1,15 @@
+.notice {
+  padding: 15px;
+  border-radius: $borderRadius;
+  margin-bottom: 15px;
+}
+
+.notice--success {
+  background: $green;
+  color: $white;
+}
+
+.notice--error {
+  background: $red;
+  color: $white;
+}
