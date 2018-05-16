@@ -1,6 +1,6 @@
 comments:
   allowedFields: ["name", "email", "path", "message"]
-  branch: "master"
+  branch: "development"
   commitMessage: "Adding a new comment"
   extension: "md"
   filename: "{@timestamp}_{@id}"
