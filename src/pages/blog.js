@@ -31,7 +31,6 @@ export const blogQuery = graphql`
     posts: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/cms/posts/" } }
       sort: { order: DESC, fields: [frontmatter___date] }
-      limit: 50
     ) {
       edges {
         node {

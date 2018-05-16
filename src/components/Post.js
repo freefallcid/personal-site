@@ -4,7 +4,7 @@ import Img from "gatsby-image";
 
 export default ({ post }) => {
   return (
-    <div className="post" key={post.title}>
+    <div className="post">
       <Link className="post__link" to={post.path}>
         <Img className="post__image" sizes={post.image.sizes} />
         <div>

@@ -2,9 +2,12 @@ import React from "react";
 import Img from "gatsby-image";
 import Helmet from "react-helmet";
 import config from "../../config";
+import CommentList from "../components/CommentList";
+import CommentForm from "../components/CommentForm";
 
 export default ({ data }) => {
-  const post = data.markdownRemark;
+  const post = data.post;
+  const comments = data.comments;
 
   return (
     <div className="container">
@@ -20,6 +23,8 @@ export default ({ data }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </article>
+      <CommentForm path={post.path} />
+      <CommentList comments={comments} />
     </div>
   );
 };
@@ -59,7 +64,7 @@ function BlogPostHead({ post }) {
 
 export const postQuery = graphql`
   query PostByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+    post: markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       excerpt(pruneLength: 180)
       frontmatter {
@@ -70,6 +75,20 @@ export const postQuery = graphql`
       image: childImageSharp {
         sizes {
           ...GatsbyImageSharpSizes
+        }
+      }
+    }
+
+    comments: allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: { regex: "/cms/comments/" }
+        frontmatter: { path: { eq: $path } }
+      }
+      sort: { order: ASC, fields: [frontmatter___date] }
+    ) {
+      edges {
+        node {
+          ...CommentFragment
         }
       }
     }

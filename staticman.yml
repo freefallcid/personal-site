@@ -1,0 +1,22 @@
+comments:
+  allowedFields: ["name", "email", "path", "message"]
+  branch: "master"
+  commitMessage: "Adding a new comment"
+  extension: "md"
+  filename: "{@timestamp}_{@id}"
+  format: "frontmatter"
+  transforms:
+    message: "frontmatterContent"
+  generatedFields:
+    date:
+      type: date
+      options:
+        format: "iso8601"
+  moderation: false
+  name: "www.bhnywl.com"
+  notifications:
+    enabled: false
+  path: "cms/comments"
+  requiredFields: ["name", "email", "path", "message"]
+  transforms:
+    email: md5
