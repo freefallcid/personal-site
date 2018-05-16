@@ -87,7 +87,7 @@ export default class CommentForm extends React.Component {
             onChange={this.handleChange.bind(this)}
             value={this.state.fields.message}
             id="message"
-            placeholder="Enter you comment (markdown is supported)"
+            placeholder="Enter you comment"
             autoFocus
             required
           />

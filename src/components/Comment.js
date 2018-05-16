@@ -7,10 +7,7 @@ export default ({ comment }) => {
       <div>
         <h3 className="comment__name">{comment.name}</h3>
         <p className="comment__date">{comment.date}</p>
-        <div
-          className="comment__message"
-          dangerouslySetInnerHTML={{ __html: comment.html }}
-        />
+        <p className="comment__message">{comment.message}</p>
       </div>
     </div>
   );
@@ -18,10 +15,10 @@ export default ({ comment }) => {
 
 export const query = graphql`
   fragment CommentFragment on MarkdownRemark {
-    html
     id
     frontmatter {
       name
+      message
       email
       date(formatString: "MMMM DD, YYYY")
     }
