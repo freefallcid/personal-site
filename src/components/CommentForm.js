@@ -40,7 +40,7 @@ export default class CommentForm extends React.Component {
   }
 
   error(err) {
-    console.log(err.repsonse);
+    console.log(JSON.parse(err.request.response));
     this.setState({
       success: false,
       error: true

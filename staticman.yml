@@ -5,8 +5,6 @@ comments:
   extension: "md"
   filename: "{@timestamp}_{@id}"
   format: "frontmatter"
-  transforms:
-    message: "frontmatterContent"
   generatedFields:
     date:
       type: date
@@ -19,4 +17,5 @@ comments:
   path: "cms/comments"
   requiredFields: ["name", "email", "path", "message"]
   transforms:
+    message: "frontmatterContent"
     email: md5
