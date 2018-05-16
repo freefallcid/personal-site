@@ -11,7 +11,7 @@ export default class CommentForm extends React.Component {
     fields: {
       email: "",
       name: "",
-      message: ""
+      body: ""
     }
   };
 
@@ -40,7 +40,7 @@ export default class CommentForm extends React.Component {
       fields: {
         email: "",
         name: "",
-        message: ""
+        body: ""
       }
     });
   }
@@ -72,7 +72,7 @@ export default class CommentForm extends React.Component {
 
     return (
       <form className="comment-form" onSubmit={this.handleSubmit.bind(this)}>
-        <label htmlFor="message">Leave a comment</label>
+        <label htmlFor="body">Leave a comment</label>
         <div className="comment-form__field">
           {this.state.error &&
             <div className="notice notice--error">
@@ -85,8 +85,8 @@ export default class CommentForm extends React.Component {
           <textarea
             className="input"
             onChange={this.handleChange.bind(this)}
-            value={this.state.fields.message}
-            id="message"
+            value={this.state.fields.body}
+            id="body"
             placeholder="Enter you comment"
             autoFocus
             required

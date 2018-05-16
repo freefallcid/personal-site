@@ -1,5 +1,5 @@
 comments:
-  allowedFields: ["name", "email", "path", "message"]
+  allowedFields: ["name", "email", "path", "body"]
   branch: "development"
   commitMessage: "Adding a new comment"
   extension: "md"
@@ -15,6 +15,6 @@ comments:
   notifications:
     enabled: false
   path: "cms/comments"
-  requiredFields: ["name", "email", "path", "message"]
+  requiredFields: ["name", "email", "path", "body"]
   transforms:
     email: md5

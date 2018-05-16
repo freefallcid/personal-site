@@ -5,5 +5,5 @@ name: Mr example
 path: /blog/building-my-blog-with-gatsby
 date: '2018-05-16T22:10:54.448Z'
 layout: post
-message: Hello, world!
+body: Hello, world!
 ---
