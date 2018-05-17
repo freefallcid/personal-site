@@ -5,7 +5,6 @@ title: Comments for your static blog with Staticman
 image: /assets/mic-mic-stand-microphone-64057.jpg
 pinned: true
 ---
-
 If you've made a blog using a static site generator like Hugo, Jekyll or Gatsby then you already know all the great things going static can do for you. Static sites are blazing fast, easy to develop, and have plenty of cheap hosting options. You've probably also encountered the biggest con: it can be difficult to add dynamic functionality.
 
 One of the most common pieces of dynamic functionality you're going to need for a blog is comments. The typical way for developers to add a comment section to their static blog is to integrate with a 3rd party service such as [Disqus](https://disqus.com/), or a similar open source solution like [Commento](https://github.com/adtac/commento).
@@ -49,7 +48,7 @@ https://api.staticman.net/v2/entry/{GITHUB USERNAME}/{GITHUB REPOSITORY}/{BRANCH
 In the url above the `PROPERTY` field is the name of the resource you named in your config file, so for me it is `comments`. You should make a `POST` request to this url, and your fields should be in the request body under a `fields` key, the request should look something like this:
 
 ```js
-request.post(youStaticmanUrl, {
+request.post(yourStaticmanUrl, {
   options: {},
   fields: {
     name: "name",
@@ -65,10 +64,10 @@ The options fields is for any additional options you want to send - check the do
 ```html
 <form method="POST" action="{yourStaticmanUrl}">
   <input name="options[redirect]" type="hidden" value="https://my-site.com">
-  <input name="options[path]" type="hidden" value="{path}">
-  <label><input name="fields[name]" type="text">Name</label>
-  <label><input name="fields[email]" type="email">E-mail</label>
-  <label><textarea name="fields[message]"></textarea>Message</label>
+  <input name="fields[path]" type="hidden" value="{path}">
+  <input name="fields[name]" type="text" />
+  <input name="fields[email]" type="email" />
+  <textarea name="fields[message]"></textarea>
 
   <button type="submit">Post comment!</button>
 </form>
