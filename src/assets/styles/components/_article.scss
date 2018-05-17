@@ -20,6 +20,7 @@
 
 .article__title {
   font-size: 2em;
+  line-height: 1.2;
   font-weight: $font-weight-bold;
 }
 
@@ -27,13 +28,17 @@
   color: $darkestGrey;
 }
 
-.article__body {
-  padding: 50px 0 100px 0;
+.article__footer {
+  background-color: $lightestGrey;
+  border-top: 1px solid $lightGrey;
+  padding-top: 30px;
+  padding-bottom: 120px;
 }
 
 .article__body {
   line-height: 1.7;
   font-size: 17px;
+  padding: 50px 0 100px 0;
 
   img {
     box-sizing: content-box;

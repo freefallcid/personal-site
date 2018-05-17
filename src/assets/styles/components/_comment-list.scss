@@ -3,11 +3,11 @@
   flex-direction: column;
   max-width: 700px;
   margin: auto;
-  margin-bottom: 150px;
 }
 
 .comment-list__comment {
   border: 1px solid $mediumGrey;
+  background-color: $white;
   padding: 20px;
   margin-bottom: 15px;
 }
@@ -15,7 +15,7 @@
 .comment-list--empty {
   text-align: center;
   padding: 25px;
-  color: $darkestGrey;
+  color: $darkGrey;
   font-size: 18px;
-  background-color: $lightGrey;
+  border: 1px dashed $mediumGrey;
 }
