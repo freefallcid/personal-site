@@ -5,5 +5,5 @@ name: Ben Honeywill
 path: /blog/comments-for-your-static-blog-with-staticman
 date: '2018-05-17T17:22:13.855Z'
 layout: post
-body: What does everyone think about using Staticman for dynamic content in static websites?
+body: What are your thoughts on Staticman?
 ---
