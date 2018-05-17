@@ -5,6 +5,7 @@
   border-radius: $borderRadius;
   border: 1px solid $mediumGrey;
   margin-bottom: 15px;
+  background-color: $white;
 }
 
 .comment-form--hidden {
@@ -12,9 +13,10 @@
   transition: all 0.1s ease-out;
   text-align: center;
   font-size: 18px;
-  
+
   &:hover {
-    background-color: $lightGrey;
+    background-color: lighten($blue, 56.75%);
+    border: 1px solid lighten($blue, 51%);
   }
 }
 
@@ -37,4 +39,21 @@
   display: inline-block;
   padding-bottom: 12px;
   font-weight: $font-weight-bold;
+}
+
+@media (max-width: 630px) {
+  .comment-form__flex {
+    flex-direction: column;
+    .comment-form__field {
+      margin-bottom: 10px;
+      align-items: stretch;
+      flex: 0 1 100%;
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  .comment-form__submit {
+    width: 100%;
+  }
 }

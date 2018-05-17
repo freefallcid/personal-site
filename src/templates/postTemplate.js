@@ -10,21 +10,27 @@ export default ({ data }) => {
   const comments = data.comments;
 
   return (
-    <div className="container">
+    <div>
       <BlogPostHead post={post} />
       <article className="article">
-        <header className="article__header">
-          <h1 className="article__title">{post.frontmatter.title}</h1>
-          <p className="article__date">{post.frontmatter.date}</p>
-        </header>
-        <Img className="article__image" sizes={post.image.sizes} />
-        <main
-          className="article__body"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
+        <div className="container">
+          <header className="article__header">
+            <h1 className="article__title">{post.frontmatter.title}</h1>
+            <p className="article__date">{post.frontmatter.date}</p>
+          </header>
+          <Img className="article__image" sizes={post.image.sizes} />
+          <main
+            className="article__body"
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
+        </div>
+        <footer className="article__footer">
+          <div className="container">
+            <CommentForm path={post.frontmatter.path} />
+            <CommentList comments={comments} />
+          </div>
+        </footer>
       </article>
-      <CommentForm path={post.frontmatter.path} />
-      <CommentList comments={comments} />
     </div>
   );
 };
