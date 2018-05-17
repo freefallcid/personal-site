@@ -12,12 +12,12 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
+      - { name: pinned, label: Pinned, widget: boolean, default: false }
+      - { name: title, label: Title }
       - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
       - { name: image, label: Image, widget: image }
       - { name: body, label: Body, widget: markdown }
-      - { name: pinned, label: Pinned, widget: boolean, default: false }
 
   - name: projects
     label: Projects
@@ -25,11 +25,11 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { name: githubUrl, label: Github Url, required: false }
+      - { name: order, label: Order, widget: number }
       - { name: title, label: Title }
+      - { name: githubUrl, label: Github Url, required: false }
       - { name: image, label: Image, widget: image }
       - { name: description, label: Description }
-      - { name: order, label: Order, widget: number }
       - { name: tech, label: Tech, widget: list, field: {
           name: techType, label: Tech Type, widget: "select", options: [
             "React", "Redux", "Ruby on Rails", "JavaScript", "Ruby", "Gatsby", "Webpack", "Sass", "GraphQL"

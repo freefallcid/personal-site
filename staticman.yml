@@ -1,7 +1,7 @@
 comments:
   allowedFields: ["name", "email", "path", "body"]
   branch: "master"
-  commitMessage: "Adding a new comment"
+  commitMessage: "You have a new comment on your website."
   extension: "md"
   filename: "{@id}"
   format: "frontmatter"
