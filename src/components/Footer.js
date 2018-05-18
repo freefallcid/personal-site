@@ -32,13 +32,19 @@ export default () => {
             <h3 className="footer__section-title">Social media</h3>
             <ul className="footer__list">
               <li className="footer__list-item">
-                <Link to="https://github.com/bhnywl">Github</Link>
+                <a href="https://github.com/bhnywl" target="_blank">
+                  Github
+                </a>
               </li>
               <li className="footer__list-item">
-                <Link to="https://twitter.com/bhnywl">Twitter</Link>
+                <a href="https://twitter.com/bhnywl" target="_blank">
+                  Twitter
+                </a>
               </li>
               <li className="footer__list-item">
-                <Link to="https://reddit.com/user/bhnywl">Reddit</Link>
+                <a href="https://reddit.com/user/bhnywl" target="_blank">
+                  Reddit
+                </a>
               </li>
             </ul>
           </div>
