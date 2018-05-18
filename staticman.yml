@@ -17,4 +17,5 @@ comments:
   path: "cms/comments"
   requiredFields: ["name", "email", "path", "body"]
   transforms:
+    body: "frontmatterContent"
     email: md5
