@@ -26,7 +26,6 @@
     "gatsby-transformer-remark": "^1.7.41",
     "gatsby-transformer-sharp": "^1.6.24",
     "prismjs": "^1.14.0",
-    "react-helmet": "^5.2.0",
-    "react-linkify": "^0.2.2"
+    "react-helmet": "^5.2.0"
   }
 }

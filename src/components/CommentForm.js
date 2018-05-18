@@ -74,20 +74,22 @@ export default class CommentForm extends React.Component {
       <form className="comment-form" onSubmit={this.handleSubmit.bind(this)}>
         <label htmlFor="body">Leave a comment</label>
         <div className="comment-form__field">
-          {this.state.error &&
+          {this.state.error && (
             <div className="notice notice--error">
               <p>Sorry, there was an error submitting your comment</p>
-            </div>}
-          {this.state.success &&
+            </div>
+          )}
+          {this.state.success && (
             <div className="notice notice--success">
               <p>Thank you! Your comment is being processed</p>
-            </div>}
+            </div>
+          )}
           <textarea
             className="input"
             onChange={this.handleChange.bind(this)}
             value={this.state.fields.body}
             id="body"
-            placeholder="Enter you comment"
+            placeholder="Enter you comment (markdown supported)"
             autoFocus
             required
           />
@@ -119,7 +121,7 @@ export default class CommentForm extends React.Component {
           <button
             className={
               "comment-form__submit button " +
-                (this.state.loading ? "button--loading" : null)
+              (this.state.loading ? "button--loading" : null)
             }
             type="submit"
           >

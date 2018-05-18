@@ -1,5 +1,4 @@
 import React from "react";
-import Linkify from "react-linkify";
 
 export default ({ comment }) => {
   return (
@@ -8,11 +7,10 @@ export default ({ comment }) => {
       <div>
         <h3 className="comment__name">{comment.name}</h3>
         <p className="comment__date">{comment.date}</p>
-        <p className="comment__body">
-          <Linkify properties={{ target: "_blank", rel: "nofollow" }}>
-            {comment.body}
-          </Linkify>
-        </p>
+        <div
+          className="comment__body"
+          dangerouslySetInnerHTML={{ __html: comment.html }}
+        />
       </div>
     </div>
   );
@@ -21,9 +19,9 @@ export default ({ comment }) => {
 export const query = graphql`
   fragment CommentFragment on MarkdownRemark {
     id
+    html
     frontmatter {
       name
-      body
       email
       date(formatString: "MMMM DD, YYYY")
     }
