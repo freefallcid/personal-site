@@ -39,7 +39,7 @@ function BlogPostHead({ post }) {
   return (
     <Helmet>
       {/* General tags */}
-      <meta name="title" content={post.frontmatter.title} />
+      <title>{post.frontmatter.title}</title>
       <meta name="description" content={post.excerpt} />
       <meta name="image" content={post.image.sizes.src} />
 
