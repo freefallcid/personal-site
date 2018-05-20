@@ -4,7 +4,7 @@ export default ({ comment }) => {
   return (
     <div className="comment">
       <img className="comment__avatar" src={comment.avatar} />
-      <div>
+      <div className="comment__wrapper">
         <h3 className="comment__name">{comment.name}</h3>
         <p className="comment__date">{comment.date}</p>
         <div
