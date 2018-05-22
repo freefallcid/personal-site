@@ -1,9 +1,9 @@
 ---
+pinned: false
+title: Comments for your static blog with Staticman
 path: /blog/comments-for-your-static-blog-with-staticman
 date: 2018-05-17T17:22:13.855Z
-title: Comments for your static blog with Staticman
 image: /assets/mic-mic-stand-microphone-64057.jpg
-pinned: true
 ---
 If you've made a blog using a static site generator like Hugo, Jekyll or Gatsby then you already know all the great things going static can do for you. Static sites are blazing fast, easy to develop, and have plenty of cheap hosting options. You've probably also encountered the biggest con: it can be difficult to add dynamic functionality.
 
