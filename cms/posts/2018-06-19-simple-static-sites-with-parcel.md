@@ -3,7 +3,7 @@ pinned: false
 title: Simple static sites with Parcel
 path: /blog/simple-static-sites-with-parcel
 date: 2018-06-19T19:25:57.984Z
-image: /assets/chuttersnap-485281-unsplash.jpg
+image: /assets/box-decorating-gift-264869.jpg
 ---
 Sometimes you just need to create a quick and simple single page static site without any bells and whistles. Maybe it's a landing page for a new product, a simple brochure site, or a single page portfolio.
 
