@@ -12,6 +12,8 @@ import graphqlIcon from "../assets/icons/tech/graphql.png";
 import mochaIcon from "../assets/icons/tech/mocha.jpg";
 import nodeIcon from "../assets/icons/tech/node.svg";
 import expressIcon from "../assets/icons/tech/express.png";
+import mongodbIcon from "../assets/icons/tech/mongodb.png";
+import postgresqlIcon from "../assets/icons/tech/postgresql.png";
 
 function getTechIcon(tech) {
   switch (tech) {
@@ -39,6 +41,10 @@ function getTechIcon(tech) {
       return nodeIcon;
     case "Express":
       return expressIcon;
+    case "MongoDB":
+      return mongodbIcon;
+    case "PostgreSQL":
+      return postgresqlIcon;
     default:
       return undefined;
   }

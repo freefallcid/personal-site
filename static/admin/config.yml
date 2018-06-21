@@ -32,6 +32,8 @@ collections:
       - { name: description, label: Description }
       - { name: tech, label: Tech, widget: list, field: {
           name: techType, label: Tech Type, widget: "select", options: [
-            "React", "Redux", "Ruby on Rails", "JavaScript", "Ruby", "Gatsby", "Webpack", "Sass", "GraphQL"
+            "React", "Redux", "Ruby on Rails", "JavaScript", "Ruby", "Gatsby",
+            "Webpack", "Sass", "GraphQL", "Node", "Mocha", "Express", "MongoDB",
+            "PostgreSQL"
           ]
         } }
