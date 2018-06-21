@@ -5,8 +5,7 @@ image: /assets/javascript.png
 description: >-
   Eventfully is a simple, zero-dependency JavaScript library i made for handling
   and dispatching events.
-order: '5'
+order: '6'
 tech:
   - JavaScript
 ---
-

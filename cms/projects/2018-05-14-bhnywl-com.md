@@ -5,11 +5,10 @@ image: /assets/gatsby.png
 description: >-
   This is the site your are on right now! Created using the static site
   generator Gatsby.
-order: '4'
+order: '3'
 tech:
   - Gatsby
   - React
   - Sass
   - GraphQL
 ---
-
