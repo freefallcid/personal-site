@@ -9,6 +9,9 @@ import gatsbyIcon from "../assets/icons/tech/gatsby.jpg";
 import reduxIcon from "../assets/icons/tech/redux.svg";
 import sassIcon from "../assets/icons/tech/sass.png";
 import graphqlIcon from "../assets/icons/tech/graphql.png";
+import mochaIcon from "../assets/icons/tech/mocha.jpg";
+import nodeIcon from "../assets/icons/tech/node.svg";
+import expressIcon from "../assets/icons/tech/express.png";
 
 function getTechIcon(tech) {
   switch (tech) {
@@ -30,6 +33,12 @@ function getTechIcon(tech) {
       return sassIcon;
     case "GraphQL":
       return graphqlIcon;
+    case "Mocha":
+      return mochaIcon;
+    case "Node":
+      return nodeIcon;
+    case "Express":
+      return expressIcon;
     default:
       return undefined;
   }
