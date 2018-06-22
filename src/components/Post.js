@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
-import Img from "gatsby-image";
+import Img from "./Image";
 
 export default ({ post }) => {
   return (
