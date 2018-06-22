@@ -77,12 +77,15 @@
   width: 30px;
   height: 30px;
   background: $lightGrey;
-  padding: 5px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: background-color 0.15s ease-out;
+  img {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .navigation__socialIcon--twitter {

@@ -19,7 +19,7 @@ export default ({ data }) => {
             <p className="article__date">{post.frontmatter.date}</p>
           </header>
           <Img className="article__image" sizes={post.image.sizes} />
-          <main
+          <div
             className="article__body"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
