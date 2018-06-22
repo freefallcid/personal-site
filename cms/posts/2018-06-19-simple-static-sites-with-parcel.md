@@ -130,11 +130,11 @@ Now create a file called `.posthtmlrc.js` in the root of your project. This is a
 // .posthtmlrc.js
 
 module.exports = {
-  plugins: [
-    require("posthtml-include")({
+  plugins: {
+    "posthtml-include": {
       root: "./partials"
-    })
-  ]
+    }
+  }
 };
 ```
 
