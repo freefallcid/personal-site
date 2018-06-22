@@ -1,5 +1,5 @@
 import React from "react";
-import Img from "gatsby-image";
+import Img from "../components/Image";
 import Helmet from "react-helmet";
 import config from "../../config";
 import CommentList from "../components/CommentList";
