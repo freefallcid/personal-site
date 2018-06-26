@@ -3,7 +3,7 @@ pinned: true
 title: Organising large React & Redux apps
 path: /blog/organising-large-react-and-redux-apps
 date: 2018-05-22T19:33:19.681Z
-image: /assets/thought-catalog-214785-unsplash.jpg
+image: /assets/joshua-fuller-715036-unsplash.jpg
 ---
 Unlike frameworks like Ruby on Rails where _convention over configuration_ dictates exactly how things should be done, structuring React apps can be hard. There is no "right" way of doing things, so the decision falls squarely on the developers shoulders. Having a well organised and well structured app makes your job easier: adding new features is easier, finding bugs is easier, and bringing new team members up to speed with the app is easier. So what makes a well organised app?
 
