@@ -181,7 +181,7 @@ You import a `box.css` CSS file just like in the Vanilla CSS method, but this ti
 
 ### The Good
 
-CSS modules will alter the class names in the resulting css files to be unique, which will effectively scope your styles, making them more appropriate for a component-based web app. By using CSS Modules you completely negate the main downside of using Vanilla CSS (the global namespace), while keeping all of the benefits. You still have access to everything in CSS, and you can still use a CSS preprocessor if you like (it will still require a build step).
+CSS Modules will alter the class names in the resulting css files to be unique, which will effectively scope your styles, making them more appropriate for a component-based web app. By using CSS Modules you completely negate the main downside of using Vanilla CSS (the global namespace), while keeping all of the benefits. You still have access to everything in CSS, and you can still use a CSS preprocessor if you like (it will still require a build step).
 
 Your codebase will still be made up of plain CSS files, so even though you have to add a build step and slightly change the way you import and apply your styles, the footprint left on your app is small. This means that if you ever need to pivot away from CSS Modules in the future, the transition should be quite painless.
 
@@ -189,7 +189,7 @@ Your codebase will still be made up of plain CSS files, so even though you have 
 
 CSS modules solve the global nature of CSS by scoping classes, but other than that it has the same problems as plain CSS stylesheets.
 
-- You need to set up your build step to handle CSS modules (and Sass/Stylus if you're using it)
+- You need to set up your build step to handle CSS Modules (and Sass/Stylus if you're using it). `create-react-app` supports CSS Modules as of January.
 - Just like in CSS you don't have access to any JavaScript for complicated logic.
 
 # Styled Components
