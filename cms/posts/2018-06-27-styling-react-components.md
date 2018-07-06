@@ -5,7 +5,6 @@ path: /blog/styling-react-components
 date: 2018-06-27T19:25:57.984Z
 image: /assets/rhondak-native-florida-folk-artist-83553-unsplash.jpg
 ---
-
 How to style React components is a controversial subject. There has been debate about whether styles should be defined in JavaScript using one of the new _CSS in JS_ solutions, or if a more traditional method of styling using external stylesheets is the best approach.
 
 Let's look at the different ways of styling React components and discuss their respective pros and cons. By the end of the article you should have a good idea of all the different techniques available to you, and be more informed to choose which one is right for your project.
@@ -49,13 +48,10 @@ Your build process will gather all of your imported CSS files and create a separ
 
 Because you're just using Vanilla CSS you have access to all the great features in css that you are used to:
 
-- Media queries
-
-- Keyframe animations
-
-- Pseudo-elements (eg. `:before`, `:after`)
-
-- Pseudo-selectors (eg. `:hover`, `:nth-child`)
+* Media queries
+* Keyframe animations
+* Pseudo-elements (eg. `:before`, `:after`)
+* Pseudo-selectors (eg. `:hover`, `:nth-child`)
 
 You're using plain CSS, one of the fundamental building blocks of the web. This means you don't have to add any dependencies to your project. You also don't have to worry about CSS becoming obsolete in the near future, unlike with some of the other styling solutions.
 
@@ -137,13 +133,10 @@ You can see how this is much more declarative, instead of applying certain style
 
 In practice, for any projects that aren't just hobby projects, I would never recommend using inline styles. This is because we lose so many of the best things you get in CSS by taking a JS only approach:
 
-- We can't do media queries. Web apps need to be responsive in 2018 and with inline styles you'd need to add a lot of complicated and confusing custom window resizing logic to get it to work.
-
-- We lose CSS keyframe animations. This is the most performant way to do many different kinds of animation on the web.
-
-- You can't add pseudo-elements (eg. `:before`, `:after`), you'd have to add these into your JSX.
-
-- You can't add Pseudo-selectors (eg. `:hover`, `:nth-child`), you're going to have to add `mouseover` and `mouseleave` events to emulate `:hover` behaviour.
+* We can't do media queries. Web apps need to be responsive in 2018 and with inline styles you'd need to add a lot of complicated and confusing custom window resizing logic to get it to work.
+* We lose CSS keyframe animations. This is the most performant way to do many different kinds of animation on the web.
+* You can't add pseudo-elements (eg. `:before`, `:after`), you'd have to add these into your JSX.
+* You can't add Pseudo-selectors (eg. `:hover`, `:nth-child`), you're going to have to add `mouseover` and `mouseleave` events to emulate `:hover` behaviour.
 
 Missing out on any one of these is a deal-breaker for a lot of apps. You would also lose anything that you have transforming your CSS in a build step, for example vendor auto-prefixing. Subjectively, I also find writing CSS and JavaScript objects very clunky and unenjoyable.
 
@@ -189,8 +182,8 @@ Your codebase will still be made up of plain CSS files, so even though you have 
 
 CSS modules solve the global nature of CSS by scoping classes, but other than that it has the same problems as plain CSS stylesheets.
 
-- You need to set up your build step to handle CSS Modules (and Sass/Stylus if you're using it). `create-react-app` supports CSS Modules as of January.
-- Just like in CSS you don't have access to any JavaScript for complicated logic.
+* You need to set up your build step to handle CSS Modules (and Sass/Stylus if you're using it). `create-react-app` supports CSS Modules as of January.
+* Just like in CSS you don't have access to any JavaScript for complicated logic.
 
 # Styled Components
 
@@ -232,9 +225,9 @@ import React from "react";
 import styled from "styled-components";
 
 const Button = styled.button`
-  background: ${props.color};
-  font-size: ${props.large ? "18px" : "14px"};
-  border-radius: ${props.rounded ? "10px" : "0"};
+  background: ${props => props.color};
+  font-size: ${props => props.large ? "18px" : "14px"};
+  border-radius: ${props => props.rounded ? "10px" : "0"};
 `;
 
 export default props => <Button {...props} />;
