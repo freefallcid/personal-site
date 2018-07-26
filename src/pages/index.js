@@ -13,12 +13,7 @@ export default ({ data }) => {
             <strong> Welcome to my website.</strong>
           </h2>
           <p className="page-header__paragraph">
-            I'm a front-end web developer at{" "}
-            <a href="https://atech.media" target="_blank">
-              aTech Media
-            </a>{" "}
-            in Poole. My website is where I post all about what's been exciting
-            me in web dev.
+            I'm a front-end web developer from Bournemouth, UK.
           </p>
         </div>
 

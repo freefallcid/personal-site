@@ -15,7 +15,7 @@ export default ({ data }) => {
           <strong> blog posts.</strong>
         </h2>
         <p className="page-header__paragraph">
-          Things that I've been learning and my thoughts on web development.
+          I write articles all about front-end web development.
         </p>
       </div>
 

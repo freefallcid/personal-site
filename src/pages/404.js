@@ -9,7 +9,7 @@ export default ({ data }) => {
           <strong> Sorry it looks like that page doesn't exist.</strong>
         </h2>
         <p className="page-header__paragraph">
-          Go back to the <Link to="/">Homepage</Link>
+          Go back to the <Link to="/">homepage</Link>
         </p>
       </div>
     </div>
