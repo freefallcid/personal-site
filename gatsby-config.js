@@ -1,4 +1,9 @@
 module.exports = {
+  siteMetadata: {
+    title: `bhnywl`,
+    description: `I am Ben Honeywill, a front-end web developer from Bournemouth, UK. This is my website.`,
+    siteUrl: `https://www.bhnywl.com`
+  },
   plugins: [
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-sass`,
@@ -74,6 +79,52 @@ module.exports = {
         fonts: [`rubik\:400,700`]
       }
     },
-    `gatsby-plugin-netlify`
+    `gatsby-plugin-netlify`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
+                  guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
+                  enclosure: { url: site.siteMetadata.siteUrl + edge.node.image.resolutions.src },
+                  custom_elements: [{ "content:encoded": edge.node.html }],
+                });
+              });
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  filter: { fileAbsolutePath: { regex: "/cms/posts/" } }
+                  sort: { order: DESC, fields: [frontmatter___date] }
+                ) {
+                  edges {
+                    node {
+                      html
+                      excerpt
+                      frontmatter {
+                        date(formatString: "MMMM DD, YYYY")
+                        path
+                        title
+                      }
+                      image: childImageSharp {
+                        resolutions {
+                          src
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/feed.xml'
+          },
+        ],
+      },
+    }
   ]
 };
