@@ -92,7 +92,7 @@ module.exports = {
                   url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
                   guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
                   enclosure: { url: site.siteMetadata.siteUrl + edge.node.image.resolutions.src },
-                  custom_elements: [{ "content:encoded": edge.node.html }],
+                  custom_elements: [{ "content:encoded": edge.node.html.replace(/(?<!bhnywl.com)\/static\//g, 'https://www.bhnywl.com/static/') }],
                 });
               });
             },
