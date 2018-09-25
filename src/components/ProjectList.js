@@ -1,4 +1,5 @@
 import React from "react";
+import InfiniteScroll from './InfiniteScroll';
 import Project from "./Project";
 
 export default ({ projects: projectData }) => {
@@ -9,12 +10,18 @@ export default ({ projects: projectData }) => {
   });
 
   return (
-    <ul className="project-list">
-      {projects.map(project => (
-        <li key={project.id} className="project-list__project">
-          <Project key={project.githubUrl} project={project} />
-        </li>
-      ))}
-    </ul>
+    <InfiniteScroll
+      items={ projects }
+      perPage={ 9 } 
+      render={(projects) => (
+        <ul className="project-list">
+          {projects.map(project => (
+            <li key={project.id} className="project-list__project">
+              <Project key={project.githubUrl} project={project} />
+            </li>
+          ))}
+        </ul>
+      )}
+    />
   );
 };
