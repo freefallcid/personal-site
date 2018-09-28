@@ -95,12 +95,6 @@ Any logic that doesn't fit anywhere else is abstracted into a `service`. For exa
 
 Have a look at my [Toodu Web](https://github.com/bhnywl/toodu-web) repository which uses these techniques.
 
-#### Want to get started with this yourself?
-
-I've created a fork of [create-react-app](https://github.com/facebook/create-react-app) which you can find [here](https://github.com/bhnywl/create-react-app).
-
-This fork will scaffold out all the boilerplate you need to get started building apps like this without any hassle.
-
 ## Let me know what you think
 
 I don't think any structure can be perfect, there are a lot of compromises that need to be made. If you have any improvements or if you like to do things differently let me know in the comments.
