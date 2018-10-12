@@ -1,6 +1,6 @@
 ---
 pinned: true
-title: Beginner Node.js tutorial (Part 1 - Set up & Node basics)
+title: 'Beginner Node.js tutorial #1'
 path: /blog/beginner-node-js-tutorial-part-1
 date: 2018-10-12T11:52:55.004Z
 image: /assets/simon-abrams-286276-unsplash.jpg
