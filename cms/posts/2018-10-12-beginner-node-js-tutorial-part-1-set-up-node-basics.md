@@ -13,7 +13,7 @@ This is the first part in a series of blog posts that will take you from a Node 
 
 If you already have Node installed then skip to the next section.
 
-If you don't already have Node installed on your system you're going to want to get this done first! If you are runnning macOS or Linux I reccomend doing this using *nvm*, which stands for Node Version Manager. This will make it easy to manage and install different versions of Node in the future.
+If you don't already have Node installed on your system you're going to want to get this done first! If you are runnning macOS or Linux I reccomend doing this using _nvm_, which stands for Node Version Manager. This will make it easy to manage and install different versions of Node in the future.
 
 #### Installing nvm on macOS with Homebrew
 
@@ -165,13 +165,10 @@ With the script running navigate to `http://localhost:3000`. If all is working, 
 
 In this first article of the series you've learnt the basics of Node and built a very simple JSON API using the `http` package. In practice, it's unlikely you would ever build an entire API like this - you will probably use a HTTP framework like Express. It's good to learn the basics though, and understand that Express is just using `http` under the hood.
 
-In the next part of the series we will start looking at Express. We'll look at installing Express and will get our new Express API to respond to different endpoint URLs with different JSON payloads. We'll then take a look at how we can send JSON to the API, and we'll be introduced to using Express middleware.
+In the next part of the series we will start looking at Express. We'll look at installing Express and will get our new Express API to respond to different endpoint URLs with different url parameters.
 
 #### Part 2 coming soon
 
 If you want to get notified when the next article is out [follow me on Twitter](https://twitter.com/bhnywl), I post all of my new blog posts there. Let me know if you've enjoyed this post and are waiting for the next one either on Twitter or in the comments below.
 
 Thanks for reading!
-
-
-
