@@ -34,7 +34,7 @@ We are going to convert this code over to using Express. First, however, we need
 
 ## Installing Express
 
-If you have ever done any JavaScript programming on the front-end you may already be familiar with **npm**. *npm* stands for 'Node Package Manager', and it is what we use to manage and install the dependencies in our JavaScript projects. Luckily for us, *npm* was automatically installed when we installed Node. To initialize *npm* in our project open your terminal and run the following command (making sure you're in the project directory):
+If you have ever done any JavaScript programming on the front-end you may already be familiar with **npm**. *npm* stands for 'Node Package Manager', and it is what we use to manage and install the dependencies in our JavaScript projects. Luckily for us, *npm* was automatically installed when we installed Node. To initialise *npm* in our project open your terminal and run the following command (making sure you're in the project directory):
 
 ```
 $ npm init
@@ -95,9 +95,9 @@ app.get('/data', (req, res) => {
 
 This route is just like the one we've already set up - we're still listening for `get` requests, but this time at the `/data` endpoint. Stop your Node server by pressing `control + c` in your terminal, and then restart it again with `node index.js`. You should be able to head to `https://localhost:3000/data` to see your new API endpoint in action. It really is this easy to add new routes in Express, but it's annoying that we have to restart the server just to see our changes take effect...
 
-### Restarting our server everytime we make a change is a pain!
+### Restarting our server every time we make a change is a pain!
 
-It's not a great developer experience having to restart the server by hand everytime we want our changes to take effect. Luckily for us, there's a great package called `nodemon` that we can use to solve this. Let's install it:
+It's not a great developer experience having to restart the server by hand every time we want our changes to take effect. Luckily for us, there's a great package called `nodemon` that we can use to solve this. Let's install it:
 
 ```
 $ npm install nodemon --save-dev
@@ -121,7 +121,7 @@ Instead of `node index.js` like we've been using up until now, we are now defini
 $ npm run start
 ```
 
-This command  should start the server like before, but now Nodemon will wait for changes to be saved and automatically restart itself everytime you save your project 🎉 Try changing some of the JSON data that you are sending down as a response and then refreshing your browser to test this out.
+This command  should start the server like before, but now Nodemon will wait for changes to be saved and automatically restart itself every time you save your project 🎉 Try changing some of the JSON data that you are sending down as a response and then refreshing your browser to test this out.
 
 ### Filtering data with URL params
 
@@ -166,7 +166,7 @@ If you haven't seen `filter` before, take a look at [the docs on MDN](https://de
 
 Now, you should be able to navigate to `http://localhost:3000/animals?pattern=spots` and only see animals with spots returned 🎉
 
-Try also changing the pattern paramter in the query string to other values and see what's returned. As a solo excercise, try settting up the endpoint so that you can also filter by the animals name.
+Try also changing the pattern parameter in the query string to other values and see what's returned. As a solo exercise, try setting up the endpoint so that you can also filter by the animals name.
 
 ### Next steps
 
