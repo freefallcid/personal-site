@@ -142,7 +142,7 @@ app.get('/animals', (req, res) => {
 
 We have added a single route at `/animals` which returns an array of various animals and their patterns. Save these changes and then navigate to `http://localhost:3000/animals`. You should see the JSON array of animals is returned to the browser (try installing [this browser extension](https://chrome.google.com/webstore/detail/json-viewer-awesome/iemadiahhbebdklepanmkjenfdebfpfe) if you want the JSON to look pretty).
 
-This is a good start, but what if we only to see animals that have spots? We need a way of sending data *to* the API, and then we need to filter the data and only return what was requested. One way we can do this is by using by using URL query strings, let's set up our API to make a request to the URL `http://localhost:3000/animals?pattern=spots` do exactly this.
+This is a good start, but what if we only want to see animals that have spots? We need a way of sending data *to* the API, and then we need to filter the data and only return what was requested. One way we can do this is by using by using URL query strings, let's set up our API to make a request to the URL `http://localhost:3000/animals?pattern=spots` do exactly this.
 
 How do we access the URL query string in Express? It's really easy! You may remember from part 1 of this tutorial that the `req` argument that gets passed to request listeners has properties and methods relating to the *request*, and the `res` argument has properties and methods for dealing with what to send as the *response*. Well, the URL query string is part of the request, and we access it with `req.query`.
 
