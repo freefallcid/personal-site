@@ -171,6 +171,6 @@ In the next part of the series we will start looking at Express. We'll look at i
 
 ~~If you want to get notified when the next article is out [follow me on Twitter](https://twitter.com/bhnywl), I post all of my new blog posts there. Let me know if you've enjoyed this post and are waiting for the next one either on Twitter or in the comments below.~~
 
-[Part 2 is out now!](https://bhnywl.com/blog/beginner-node-tutorial-part-2)
+[Part 2 is out now!](https://bhnywl.com/blog/beginner-node-js-tutorial-part-2)
 
 Thanks for reading!
