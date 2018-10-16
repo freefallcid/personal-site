@@ -13,7 +13,7 @@ This is the first part in a series of blog posts that will take you from a Node 
 
 If you already have Node installed then skip to the next section.
 
-If you don't already have Node installed on your system you're going to want to get this done first! If you are runnning macOS or Linux I reccomend doing this using _nvm_, which stands for Node Version Manager. This will make it easy to manage and install different versions of Node in the future.
+If you don't already have Node installed on your system you're going to want to get this done first! If you are running macOS or Linux I recommend doing this using _nvm_, which stands for Node Version Manager. This will make it easy to manage and install different versions of Node in the future.
 
 #### Installing nvm on macOS with Homebrew
 
@@ -53,7 +53,7 @@ You can now install the latest stable version of Node by running:
 $ nvm install stable
 ```
 
-Once that has comppleted verify that node is installed correctly by running:
+Once that has completed verify that node is installed correctly by running:
 
 ```
 $ node -v
@@ -73,7 +73,7 @@ You can press `control + c` twice to exit Node.
 
 ### Running Node scripts
 
-Node wouldn't be very useful if we could only run it through the console, so lets create a JavaScript file and write a simple Node script. Navigate to where you like save your code projects, create a new folder, and inside of that folder create a file called `index.js`. I like to save my projects in my `Code` directory so for me I run the following commands to get this file strcuture set up:
+Node wouldn't be very useful if we could only run it through the console, so lets create a JavaScript file and write a simple Node script. Navigate to where you like save your code projects, create a new folder, and inside of that folder create a file called `index.js`. I like to save my projects in my `Code` directory so for me I run the following commands to get this file structure set up:
 
 ```
 $ cd ~/Code
@@ -157,7 +157,7 @@ To dive deeper into how this works, take a look at the [`http` documentation](ht
 
 ##### Running the server
 
-As before, we can run the script with `node index.js`. After running the script you should notice that, unlike before, the script doesn't immedietly exit. This is because `server.listen` is an ongoing process, it will listen for all requests to `localhost:3000` and run our request listener function for each request. This script won't end until we either exit it, or it crashes.
+As before, we can run the script with `node index.js`. After running the script you should notice that, unlike before, the script doesn't immediately exit. This is because `server.listen` is an ongoing process, it will listen for all requests to `localhost:3000` and run our request listener function for each request. This script won't end until we either exit it, or it crashes.
 
 With the script running navigate to `http://localhost:3000`. If all is working, you should see our JSON string rendered by the browser 🎉
 
