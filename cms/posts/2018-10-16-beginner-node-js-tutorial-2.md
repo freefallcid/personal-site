@@ -180,5 +180,4 @@ If you want to be updated when the next part of this series is released [follow 
 
 See you next time!
 
-
-
+[Part 3 is out now!](https://bhnywl.com/blog/beginner-node-js-tutorial-part-3)

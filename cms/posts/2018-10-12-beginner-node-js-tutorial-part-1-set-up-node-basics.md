@@ -167,9 +167,9 @@ In this first article of the series you've learnt the basics of Node and built a
 
 In the next part of the series we will start looking at Express. We'll look at installing Express and will get our new Express API to respond to different endpoint URLs with different url parameters.
 
-#### ~~Part 2 coming soon~~
+#### Part 2 coming soon
 
-~~If you want to get notified when the next article is out [follow me on Twitter](https://twitter.com/bhnywl), I post all of my new blog posts there. Let me know if you've enjoyed this post and are waiting for the next one either on Twitter or in the comments below.~~
+If you want to get notified when the next article is out [follow me on Twitter](https://twitter.com/bhnywl), I post all of my new blog posts there. Let me know if you've enjoyed this post and are waiting for the next one either on Twitter or in the comments below.
 
 [Part 2 is out now!](https://bhnywl.com/blog/beginner-node-js-tutorial-part-2)
 
