@@ -174,7 +174,7 @@ You are starting to build up some functional and fundamental building blocks for
 
 ### Part 3 coming soon
 
-In the next part of this tutorial, we will add to our `get` request knowledge by implementing some `post` requests. These will allow us to post data to our API to create new records. Also, it's not much use saving new records if you have nowhere to persist them, so we will learn how to connect to a MongoDB database to persist our data.
+In the next part of this tutorial, we will add to our `get` request knowledge by implementing some `post` requests. These will allow us to post data to our API to create new records. Also, it's not much use saving new records if you have nowhere to persist them, so in part 4 we will learn how to connect to a MongoDB database to persist our data.
 
 If you want to be updated when the next part of this series is released [follow me on Twitter](https://twitter.com/bhnywl), where I post all of my new blog posts. If you have any questions I'd love to help you, so get in touch either on Twitter or in the comments.
 
