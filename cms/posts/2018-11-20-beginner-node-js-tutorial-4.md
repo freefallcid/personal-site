@@ -1,16 +1,16 @@
 ---
 pinned: false
 title: 'Beginner Node.js tutorial #4'
-path: /blog/beginner-node-js-tutorial-4
-date: 2018-10-31T23:36:55+00:00
+path: /blog/beginner-node-js-tutorial-part-4
+date: 2018-10-31T23:36:55.000Z
 image: >-
   /assets/blake-connally-373084-unsplash-6ee796da0704cbaa5e01c636954daa25-d14e0.jpg
 ---
 Welcome to the final part of this beginner Node.js tutorial - good job getting this far!
 
-- In [part 1](https://bhnywl.com/blog/beginner-node-js-tutorial-1) we got set up with Node and learnt how to run simple Node scripts.
-- In [part 2](https://bhnywl.com/blog/beginner-node-js-tutorial-2) we learnt how to use Express to get and filter data from our API.
-- In [part 3](https://bhnywl.com/blog/beginner-node-js-tutorial-3) we started to create `post` endpoints, and learned about Express middleware.
+- In [part 1](https://bhnywl.com/blog/beginner-node-js-tutorial-part-1) we got set up with Node and learnt how to run simple Node scripts.
+- In [part 2](https://bhnywl.com/blog/beginner-node-js-tutorial-part-2) we learnt how to use Express to get and filter data from our API.
+- In [part 3](https://bhnywl.com/blog/beginner-node-js-tutorial-part-3) we started to create `post` endpoints, and learned about Express middleware.
 
 The last piece of the puzzle is persisting our data in a database. In this tutorial we are going to use a combination of [MongoDB](https://www.mongodb.com/), [Mongoose](https://github.com/Automattic/mongoose) and [mlab](https://mlab.com/) to achieve this. Let's get started!
 
