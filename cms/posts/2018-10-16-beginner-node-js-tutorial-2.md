@@ -1,7 +1,7 @@
 ---
 pinned: false
 title: 'Beginner Node.js tutorial #2'
-path: /blog/beginner-node-js-tutorial-2
+path: /blog/beginner-node-js-tutorial-part-2
 date: 2018-10-15T08:14:28.000Z
 image: /assets/steve-halama-698056-unsplash.jpg
 ---
