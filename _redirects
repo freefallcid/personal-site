@@ -1,2 +1,3 @@
 # Redirect default Netlify subdomain to primary domain
 http://vigilant-bhabha-8aa4ab.netlify.com/* http://www.bhnywl.com/:splat 301!
+http://www.bhnywl.com/blog/beginner-node-js-tutorial-4/ http://www.bhnywl.com/blog/beginner-node-js-tutorial-part-4/ 301!
